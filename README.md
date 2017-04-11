@@ -26,17 +26,15 @@ Below, you will find a summary of the key APIs and features that are used in emb
 
 **User Filtering** -- Functionality for securely filtering a workbook based on the Tableau Server login information. In multi-tenant scenarios, if you have a single database for multiple users or clients, you can use user filters to have the same content apply to the different clients, ensuring each user can only see the rows that he or she has access to.
 
-[comment]: # (TODO: Table of Contents including a high-level explanation of the different features)
-
 ## Table of Contents
 
 [Introduction (this page)](https://github.com/tableau/embedding-playbook)
 
-[Embedding Views; JavaScript API Usage](pages/01_embedding_and_jsapi.md)
+[Embedding Views & JavaScript API Usage](pages/01_embedding_and_jsapi.md)
 
 [Authentication and Single Sign On](pages/02_auth_and_sso.md)
 
-[User Management, Content Management & Display with the REST API](pages/03_server_management_andrestapi.md)
+[User Management, Content Management & Display with the REST API](pages/03_server_management_and_restapi.md)
 
 [Multi-Tenancy and Row-Level Security](pages/04_multitenancy_and_rls.md)
 
