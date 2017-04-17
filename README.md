@@ -32,7 +32,7 @@ Below, you will find a summary of the key APIs and features that are used in emb
 
 [Embedding Views & JavaScript API Usage](pages/01_embedding_and_jsapi.md)
 
-[Authentication and Single Sign On](pages/02_auth_and_sso.md)
+[Authentication and Single Sign-On](pages/02_auth_and_sso.md)
 
 [User Management, Content Management & Display with the REST API](pages/03_server_management_and_restapi.md)
 
