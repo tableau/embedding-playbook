@@ -33,9 +33,3 @@ Additional considerations:
 * The trusted ticket is redeemable only once and the Tableau Server session is only valid for the visualization that was originally loaded. Therefore, your web application must request an additional ticket if refreshes the web page or navigates to a different page that contains embedded content.
 * By default, tickets can be redeemed only for visualizations, and not for other content pages in Tableau Server. To enable the user to see those, you must configure [unrestricted tickets](http://kb.tableau.com/articles/issue/login-prompt-when-embedding-server). See also: the [embedding non-view content](pages/06_embedding_non_view_content.md) page in this playbook.
 * If your web application has dynamic ip addresses, such that it is not feasible to trust a specific set of static ip addresses, you should create a small 'ticket requester' application that only allows requests from your web application, requests tickets from Server, and then returns them to your web application. You can then deploy this 'ticket requester' application to a static ip address.
-
-
-
-
-
-
