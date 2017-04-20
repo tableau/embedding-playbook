@@ -1,6 +1,6 @@
 # Table of Contents
 
-[Introduction](https://github.com/tableau/embedding-playbook)
+[Introduction](https://github.com/tableau/embedding-playbook/blob/master/README.md)
 
 [Embedding Views & JavaScript API Usage](./01_embedding_and_jsapi.md)
 
