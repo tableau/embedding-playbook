@@ -36,4 +36,4 @@ For a more detailed discussion of the above topics, see [this blog post](https:/
 
 ## 
 
-Back to [Embedding Non-View Content](/06_embedding_non_view_content.md) or the [Table of Contents](/00_table_of_contents.md)
+Back to [Embedding Non-View Content](./06_embedding_non_view_content.md) or the [Table of Contents](./00_table_of_contents.md)

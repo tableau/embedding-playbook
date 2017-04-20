@@ -30,6 +30,6 @@ In addition, Tableau has released the [Mobile Connected Client Plugin](https://g
 
 ## 
 
-Next section: [Embedding Non-View Content](/06_embedding_non_view_content.md)
+Next section: [Embedding Non-View Content](./06_embedding_non_view_content.md)
 
-Back to [Multi-Tenancy and Row-Level Security](/04_multitenancy_and_rls.md) or the [Table of Contents](/00_table_of_contents.md)
+Back to [Multi-Tenancy and Row-Level Security](./04_multitenancy_and_rls.md) or the [Table of Contents](./00_table_of_contents.md)

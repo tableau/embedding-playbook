@@ -2,7 +2,7 @@
 
 In most embedding scenarios, you will want to enable single sign-on so that the users that are signed in to your application do not have to also sign in to Tableau Server. There are a few ways to enable single sign-on to Tableau Server: **Active Directory + Kerberos**, **Active Directory with 'Enable automatic logon'**, **SAML**, **Trusted Authentication**, and **OpenID**.
 
-*Note: This page discusses users logging in to Tableau Server. Related, but separate, is the issue of [user management](pages/03_server_management_and_restapi.md) in which you ensure all relevant users are registered with Tableau Server.*
+*Note: This page discusses users logging in to Tableau Server. Related, but separate, is the issue of [user management](./03_server_management_and_restapi.md) in which you ensure all relevant users are registered with Tableau Server.*
 
 The guidance for which single sign-on option to use is:
 * If all of your users are registered in your Active Directory instance and you already use Kerberos for authentication for other applications, use Active Directory + Kerberos.
@@ -31,11 +31,11 @@ Trusted authentication is, unlike the above options, a piece of functionality sp
 
 Additional considerations:
 * The trusted ticket is redeemable only once and the Tableau Server session is only valid for the visualization that was originally loaded. Therefore, your web application must request an additional ticket if refreshes the web page or navigates to a different page that contains embedded content.
-* By default, tickets can be redeemed only for visualizations, and not for other content pages in Tableau Server. To enable the user to see those, you must configure [unrestricted tickets](http://kb.tableau.com/articles/issue/login-prompt-when-embedding-server). See also: the [embedding non-view content](pages/06_embedding_non_view_content.md) page in this playbook.
+* By default, tickets can be redeemed only for visualizations, and not for other content pages in Tableau Server. To enable the user to see those, you must configure [unrestricted tickets](http://kb.tableau.com/articles/issue/login-prompt-when-embedding-server). See also: the [embedding non-view content](./06_embedding_non_view_content.md) page in this playbook.
 * If your web application has dynamic ip addresses, such that it is not feasible to trust a specific set of static ip addresses, you should create a small 'ticket requester' application that only allows requests from your web application, requests tickets from Server, and then returns them to your web application. You can then deploy this 'ticket requester' application to a static ip address.
 
 ## 
 
-Next section: [User Management, Content Management & Display with the REST API](/03_server_management_and_restapi.md)
+Next section: [User Management, Content Management & Display with the REST API](./03_server_management_and_restapi.md)
 
-Back to [Embedding Views & JavaScript API Usage](/01_embedding_and_jsapi.md) or the [Table of Contents](/00_table_of_contents.md)
+Back to [Embedding Views & JavaScript API Usage](./01_embedding_and_jsapi.md) or the [Table of Contents](./00_table_of_contents.md)

@@ -4,7 +4,7 @@ Almost all embedded deployments of Tableau embed pre-built dashboards. But many 
 * Web Authoring screens
 * The Tableau Server UI (embedded for integration and single sign-on reasons)
 
-There are no APIs to achieve this type of embedding, but you can use iframes and any of the [single sign-on capabilities](/02_auth_and_sso.md) to achieve this.
+There are no APIs to achieve this type of embedding, but you can use iframes and any of the [single sign-on capabilities](./02_auth_and_sso.md) to achieve this.
 
 ### Embedding Web Authoring
 Web Authoring is the Tableau Desktop-like functionality in the browser. The fact that Web Authoring exists allows you to pass on the self-service capabilities of Tableau to your end users. You may have pre-built dashboards for them to use, but they may have minor customization request or may want to build visualizations and dashboards from scratch.
@@ -16,8 +16,8 @@ For many situations, it is acceptable to simply allow the default behavior of al
 
 Additional Considerations:
 * You will likely want to allow your users to save their edits, but not have their personalized versions affect other users. In that case, you should turn off save permissions, but allow save-as permissions. It also makes sense to give each of the users a 'sandbox' project that only they can save to.
-* To give your user access to personalized content that they create, your application will have to be dynamic to show users all content they have access to, not just those you create. See the page on [Using the REST API to display dynamic content](/03_server_management_and_restapi.md)
-* You can embed the web authoring screen to create a workbook from scratch instead of to edit an existing one. To do that, point the iframe at http://{TableauServer}/t/{site}/authoringNewWorkbook/{datasourceName} .
+* To give your user access to personalized content that they create, your application will have to be dynamic to show users all content they have access to, not just those you create. See the page on [Using the REST API to display dynamic content](./03_server_management_and_restapi.md)
+* You can embed the web authoring screen to create a workbook from scratch instead of to edit an existing one. To do that, point the iframe at `http://{TableauServer}/t/{site}/authoringNewWorkbook/{datasourceName}` .
 * If you are using trusted authentication, you can insert /trusted/{ticket} into the url as you would for a visualization
 
 ### Embedding other Tableau Server pages
@@ -27,6 +27,6 @@ To do so, simply embed http://{server}/trusted/{ticket}/t/{site}/ into an iframe
 
 ## 
 
-Next section: [Development and Deployment](/07_development_and_deployment.md)
+Next section: [Development and Deployment](./07_development_and_deployment.md)
 
-Back to [Embedding in Sharepoint, Salesforce, and Mobile Apps](/05_embedding_in_other_apps.md) or the [Table of Contents](/00_table_of_contents.md)
+Back to [Embedding in Sharepoint, Salesforce, and Mobile Apps](./05_embedding_in_other_apps.md) or the [Table of Contents](./00_table_of_contents.md)

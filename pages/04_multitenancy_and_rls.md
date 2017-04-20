@@ -5,7 +5,7 @@ Scaling an embedded analytics deployment of Tableau often means providing conten
 ### Multi-tenancy and Sites
 [Sites](http://onlinehelp.tableau.com/current/server/en-us/sites_intro.htm), in Tableau Server, act as a logical firewall. If you create a site for each client or company that will access your Tableau content, you can be assured that users on one site will not learn about users or access content on another site. 
 
-The tradeoff from that assurance is that it can make content management a bit harder. Below, we discuss the idea of creating a single workbook that is filtered to the correct data, based on who is logged in to Tableau Server. If you were using sites, however, you would have to publish that workbook once per site. [The REST API](/03_server_management_and_restapi.md) can help automate the management of content across sites, however.
+The tradeoff from that assurance is that it can make content management a bit harder. Below, we discuss the idea of creating a single workbook that is filtered to the correct data, based on who is logged in to Tableau Server. If you were using sites, however, you would have to publish that workbook once per site. [The REST API](./03_server_management_and_restapi.md) can help automate the management of content across sites, however.
 
 The alternative to managing content via sites is to use Projects and Permissions. The benefit is simpler content deployment and management. The downside is that you will have to pay extra care to ensure the Projects and Permissions are set up correctly. In addition, there are certain pages in the Tableau Server UI that allow users to see information about other users on their site. Therefore, if your users will be accessing both embedded content *and* accessing the Tableau Server UI directly, using Projects becomes less attractive.
 
@@ -21,16 +21,16 @@ Row-level Security is both a security and content management concern. The simple
 First, build a 'template' workbook that points at a single database. Build the necessary visualizations and dashboards.
 Then, create a script that:
 1) For each tenant, uses the Document API to change the database connection information, and save a copy. [Sample Script](https://github.com/tableau/document-api-python/blob/master/samples/replicate-workbook/replicate_workbook.py)
-2) Uses the [REST API (or Server Client Library)](/03_server_management_and_restapi.md)  to publish each tenant's workbook to Server.
+2) Uses the [REST API (or Server Client Library)](./03_server_management_and_restapi.md)  to publish each tenant's workbook to Server.
 
 The above is all that is necessary if your workbooks have 'embedded datasources' (the datasources haven't been published separately). If you do choose to [publish the datasources to take advantage of Tableau Server's Data Server](https://onlinehelp.tableau.com/current/pro/desktop/en-us/publish_datasources.html), the Document API will still work. You will just have to apply the above workflow first to the datasource(s) and then to the workbooks:
 
 First, build a 'template' datasource, publish it, and build a 'template' workbook that points at the published datasource.
 Then, create a script that:
 1) For each tenant, uses the Document API to change the database connection information in the TDS (datasource file), and save a copy.
-2) Uses the [REST API (or Server Client Library)](/03_server_management_and_restapi.md) to publish each tenant's datasource to Server. The datasource will now have a connection string that you can use in the workbooks...
+2) Uses the [REST API (or Server Client Library)](./03_server_management_and_restapi.md) to publish each tenant's datasource to Server. The datasource will now have a connection string that you can use in the workbooks...
 3) For each tenant, for each workbook, uses the Document API to change the published datasource connection information, and save a copy.
-4) Uses the [REST API (or Server Client Library)](/03_server_management_and_restapi.md) to publish each all of the workbooks to Server.
+4) Uses the [REST API (or Server Client Library)](./03_server_management_and_restapi.md) to publish each all of the workbooks to Server.
 
 ### User Filters
 If your tenants 'share' a database server, and there is logic in the database that determines which users can see which rows, you can build your datasources and workbooks using 'User Filters' which is a way to filter based on which user is currently logged in to Tableau Server.
@@ -63,6 +63,6 @@ Link | Description
 
 ## 
 
-Next section: [Embedding in Sharepoint, Salesforce, and Mobile Apps](/05_embedding_in_other_apps.md)
+Next section: [Embedding in Sharepoint, Salesforce, and Mobile Apps](./05_embedding_in_other_apps.md)
 
-Back to [User Management, Content Management & Display with the REST API](/03_server_management_and_restapi.md) or the [Table of Contents](/00_table_of_contents.md)
+Back to [User Management, Content Management & Display with the REST API](./03_server_management_and_restapi.md) or the [Table of Contents](./00_table_of_contents.md)

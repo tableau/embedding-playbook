@@ -1,6 +1,6 @@
 # User Management, Content Management, and Display with the REST API
 
-Embedding a single visualization with the [JavaScript API](pages/01_embedding_and_jsapi.md) and enabling [single sign-on](pages/02_auth_and_sso.md) is a crucial first step, but is only part of the story when building scaled solutions that use Tableau content as components. You often will have to use the REST API to integrate the users and content between your system and Tableau Server.
+Embedding a single visualization with the [JavaScript API](./01_embedding_and_jsapi.md) and enabling [single sign-on](./02_auth_and_sso.md) is a crucial first step, but is only part of the story when building scaled solutions that use Tableau content as components. You often will have to use the REST API to integrate the users and content between your system and Tableau Server.
 
 The REST API allows you to query and manage sites, users, groups, workbooks, datasources, projects, and subscriptions/schedules. The automation and integration use cases are effectively infinite, but the most common workflows it is used for in embedded analytics are:
 * User creation to sync with the users in the embedding application
@@ -41,6 +41,6 @@ Depending on the size of the workbook or datasource, it may be possible to publi
 
 ## 
 
-Next section: [Multi-Tenancy and Row-Level Security](/04_multitenancy_and_rls.md)
+Next section: [Multi-Tenancy and Row-Level Security](./04_multitenancy_and_rls.md)
 
-Back to [Authentication and Single Sign-On](/02_auth_and_sso.md) or the [Table of Contents](/00_table_of_contents.md)
+Back to [Authentication and Single Sign-On](./02_auth_and_sso.md) or the [Table of Contents](./00_table_of_contents.md)

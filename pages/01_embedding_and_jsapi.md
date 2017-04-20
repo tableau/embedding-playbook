@@ -36,7 +36,7 @@ function initializeViz() {
 After embedding with the JavaScript API, you have unlocked its capabilities which are crucial for integrating with the front-end of your application. The possibilities with the JavaScript API are effectively infinite, but common use cases are:
 
 **Filtering and setting parameters on load** -- The options object gives you a clean interface for filtering the visualization as it loads. This is useful for loading the viz with the correct context given where the user is in your application or choices they have made.
-Note: Filtering with the JavaScript API is **not** a security mechanism. If you wish to have tamper-proof filters applied, you should use [user filters or database security](pages/04_multitenancy_and_rls.md).
+Note: Filtering with the JavaScript API is **not** a security mechanism. If you wish to have tamper-proof filters applied, you should use [user filters or database security](./04_multitenancy_and_rls.md).
 
 **Custom interfaces for interacting with the view** -- Dashboards often have elements for filtering, changing parameters, and switching tabs, amongst other things. When integrating with another application, you may want to match the look and feel of dashboard interfaces with the look and feel of the embedding application. For example, you can create a drop-down with HTML/CSS/JS that matches the style of your application and have that drop-down make JavaScript API calls to filter the viz or change a parameter.
 
@@ -59,6 +59,6 @@ Link | Description
 
 ## 
 
-Next section: [Authentication and Single Sign-On](/02_auth_and_sso.md)
+Next section: [Authentication and Single Sign-On](./02_auth_and_sso.md)
 
-Back to the [Introduction](https://github.com/tableau/embedding-playbook) or the [Table of Contents](/00_table_of_contents.md)
+Back to the [Introduction](https://github.com/tableau/embedding-playbook) or the [Table of Contents](./00_table_of_contents.md)
