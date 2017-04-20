@@ -33,3 +33,7 @@ The Tableau content files (TDS and TWB) are XML files and thus can be easily sto
 
 ###
 For a more detailed discussion of the above topics, see [this blog post](https://tableauandbehold.com/2017/03/07/developing-and-deploying-tableau-content/)
+
+## 
+
+Back to [Embedding Non-View Content](/06_embedding_non_view_content.md) or the [Table of Contents](/00_table_of_contents.md)

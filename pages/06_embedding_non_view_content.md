@@ -25,3 +25,8 @@ You can also use the iframe approach to embed the Tableau Server UI. This is a r
 
 To do so, simply embed http://{server}/trusted/{ticket}/t/{site}/ into an iframe. Be sure to enable [unrestricted tickets](http://kb.tableau.com/articles/issue/login-prompt-when-embedding-server).
 
+## 
+
+Next section: [Development and Deployment](/07_development_and_deployment.md)
+
+Back to [Embedding in Sharepoint, Salesforce, and Mobile Apps](/05_embedding_in_other_apps.md) or the [Table of Contents](/00_table_of_contents.md)

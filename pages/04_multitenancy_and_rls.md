@@ -60,3 +60,9 @@ Link | Description
 ---- | -----------
 [Setting Up Initial SQL](hhttp://onlinehelp.tableau.com/current/pro/desktop/en-us/connect_basic_initialsql.html) | Knowledge base article on using setting up and using Initial SQL
 [Preparing your DB for Initial SQL Security](https://tableauandbehold.com/2016/03/09/using-initial-sql-for/) | Blog post to help you ensure the database is ready to use Initial SQL for row-level security
+
+## 
+
+Next section: [Embedding in Sharepoint, Salesforce, and Mobile Apps](/05_embedding_in_other_apps.md)
+
+Back to [User Management, Content Management & Display with the REST API](/03_server_management_and_restapi.md) or the [Table of Contents](/00_table_of_contents.md)

@@ -38,3 +38,9 @@ The typical workflow for building and publishing content is to do it manually wi
 * Scripting migration from site to site or server to server
 
 Depending on the size of the workbook or datasource, it may be possible to publish with a single call. If the file is large, you will need to do a send the file in pieces. For more details, see [the documentation on publishing with the REST API](http://onlinehelp.tableau.com/current/api/rest_api/en-us/help.htm#REST/rest_api_concepts_publish.htm%3FTocPath%3DConcepts%7C_____11)
+
+## 
+
+Next section: [Multi-Tenancy and Row-Level Security](/04_multitenancy_and_rls.md)
+
+Back to [Authentication and Single Sign-On](/02_auth_and_sso.md) or the [Table of Contents](/00_table_of_contents.md)

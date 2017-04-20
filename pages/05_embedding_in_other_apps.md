@@ -27,3 +27,9 @@ The Mobile App Boostrap comes in two flavors:
 * [HTML/CSS/JS/Cordova](https://cordova.apache.org/) -- [Cordova](https://cordova.apache.org/) is an engine that allows you to develop cross-device mobile applications in HTML/CSS/JS. If you are not already an ObjC/Swift shop, the Cordova template for embedding in mobile applications is a good choice.
 
 In addition, Tableau has released the [Mobile Connected Client Plugin](https://github.com/tableau/mobile-connected-client) which can accompany the Mobile App Bootstrap, or any app that embeds Tableau content, to handle authentication so that your users do not have to continually sign in to Tableau Server.
+
+## 
+
+Next section: [Embedding Non-View Content](/06_embedding_non_view_content.md)
+
+Back to [Multi-Tenancy and Row-Level Security](/04_multitenancy_and_rls.md) or the [Table of Contents](/00_table_of_contents.md)

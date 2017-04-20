@@ -57,4 +57,8 @@ Link | Description
 [JavaScript API YouTube Playlist](https://www.youtube.com/watch?v=Geppur9LDnw&list=PL_qx68DwhYA8e_z9k7uoRw0zayoY35nUJ) | A series of youtube videos to get you up and running with the JavaScript API
 [JavaScript API Samples](https://github.com/tableau/js-api-samples) | Official samples, created and maintained by Tableau
 
+## 
 
+Next section: [Authentication and Single Sign-On](/02_auth_and_sso.md)
+
+Back to the [Introduction](https://github.com/tableau/embedding-playbook) or the [Table of Contents](/00_table_of_contents.md)
