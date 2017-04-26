@@ -9,6 +9,8 @@ The Web Part, as well as the instructions for installing it are located under `C
 Using the Web Part is optional if Enable Automatic Logon option (e.g. Microsoft SSPI) is enabled for Active Directory during the Tableau Server install and configuration. In this case, simply using the built-in SharePoint Page Viewer will suffice. All you need to do is [paste the Embed Code](./01_embedding_and_jsapi.md) into the Content Editor.
 The Tableau-supplied Web Part becomes necessary when using [Trusted Ticket authentication](./02_auth_and_sso.md) to achieve Single Sign-On.
 
+You can embed Tableau Online views into Sharepoint as well, but neither Active Directory nor Trusted Tickets are supported for Online.
+
 [Documentation for embedding in Sharepoint with Active Directory](http://onlinehelp.tableau.com/current/server/en-us/embed_ex_SP.htm)
 [Documentation for embedding in Sharepoint with Local Authentication](http://onlinehelp.tableau.com/current/server/en-us/embed_ex_trustedauth.htm)
 
