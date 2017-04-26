@@ -43,6 +43,7 @@ If your tenants 'share' a database server, and there is logic in the database th
 Essentially, when connecting to your data in Tableau Desktop you will JOIN the tables containing the data necessary for analaysis to the entitlements table so that each row has a column ([Owner] in the below example) specifying which Tableau Server user it belongs to. Then you can create a calculation `username() = [Owner]` and filter to `True`.
 
 See also:
+
 Link | Description
 ---- | -----------
 [Setting Up User Filters](https://onlinehelp.tableau.com/current/pro/desktop/en-us/publish_userfilters_create.html#dynamic) | Knowledge base article on setting up user filters using the username() method
