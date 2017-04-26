@@ -9,7 +9,7 @@ The REST API allows you to query and manage sites, users, groups, workbooks, dat
 
 Because the REST API is called via HTTP, you can use whichever programming language is most appropriate. However, there is also the [Server Client Library](https://github.com/tableau/server-client-python) which simplifies the code required. The Server Client Library is currently only available in Python, but more languages are coming soon.
 
-Most commonly, you will make REST API calls from your web application's server-side code. In some cases, you will want to make those calls client-side (for example, if you are building web pages with no control over the Server-side logic). For those scenarios, Tableau Server enables CORS support.
+Most commonly, you will make REST API calls from your web application's server-side code. In some cases, you will want to make those calls client-side (for example, if you are building web pages with no control over the Server-side logic). For those scenarios, T[ableau Server enables CORS support](https://onlinehelp.tableau.com/current/api/rest_api/en-us/REST/rest_api_concepts_fundamentals.htm#Enabling).
 
 Below are high-level descriptions of the flows required to enable the most common REST API use cases, but you should [read the documentation](http://onlinehelp.tableau.com/current/api/rest_api/en-us/help.htm) to learn how to make the individual calls. [The concepts](http://onlinehelp.tableau.com/current/api/rest_api/en-us/help.htm#REST/rest_api_concepts.htm%3FTocPath%3DConcepts%7C_____0) section is a good place to start and to learn about subjects such as filtering, sorting, and paginating. Also, be sure to explore [the REST API samples repository](https://github.com/tableau/rest-api-samples).
 
