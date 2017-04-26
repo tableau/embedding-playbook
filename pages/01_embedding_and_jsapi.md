@@ -5,7 +5,7 @@ The easiest method for embedding a Tableau view (dashboard or visualization) is 
 ![Embed Code](../img/embed_code.png)
 
 Once acquired, this code can be pasted into HTML.
-This method is useful for simple embedding, such as embedding into blogs or internal knowledge bases, but **only very simple embedding scenarios should use the embed code. Most deployments should instead use the JavaScript API**
+This method is useful for simple embedding, such as embedding into blogs or internal knowledge bases, but **only very simple embedding scenarios should use the embed code. Most deployments should instead use the JavaScript API.** It is not significantly more work to embed with the JavaScript API and doing so will gain you flexibility and power in your embedded deployment.
 
 ## Embedding with the JavaScript API:
 
@@ -13,15 +13,21 @@ The basic embed code using the JavaScript looks something like:
 
 HTML:
 ```html
+<!-- JS file to enable the JavaScript API. You can point at the
+  version on public.tableau.com, online.tableau.com, or your on-prem Server -->
 <script src="https://www.example.com/javascripts/api/tableau-2.js"></script>
 ...
+<!-- Empty div where the viz will be placed -->
 <div id="tableauViz"></div>
 ```
 JavaScript:
 ```javascript
 function initializeViz() {
+  // JS object that points at empty div in the html
   var placeholderDiv = document.getElementById("tableauViz");
+  // URL of the viz to be embedded
   var url = "http://public.tableau.com/views/WorldIndicators/GDPpercapita";
+  // An object that contains options specifying how to embed the viz
   var options = {
     width: '600px',
     height: '600px',
