@@ -1,18 +1,14 @@
-# Multi-tenancy and Row-level Security
+# Multi-tenancy & Row-level Security
 
 Scaling an embedded analytics deployment of Tableau often means providing content to different groups of users. There is a security implication of making sure the different groups do not see each others' data (and metadata). There is also a deployment and maintenance consideration: Common dashboards should have to be built only once, even if the different groups of users access different data with those common dashboards.
 
-### Multi-tenancy and Sites
-[Sites](http://onlinehelp.tableau.com/current/server/en-us/sites_intro.htm), in Tableau Server, act as a logical firewall. If you create a site for each client or company that will access your Tableau content, you can be assured that users on one site will not learn about users or access content on another site. 
+### Multi-tenancy, Sites, & Projects
+The two key tools for defining which users can see which workbooks and datasources are **Projects** and **Sites**.
+[Sites](http://onlinehelp.tableau.com/current/server/en-us/sites_intro.htm) act as a logical firewall. If you create a site for each client or company that will access your Tableau content, you can be assured that users on one site will not learn about users or access content on another site. 
 
-The tradeoff from that assurance is that it can make content management a bit harder. Below, we discuss the idea of creating a single workbook that is filtered to the correct data, based on who is logged in to Tableau Server. If you were using sites, however, you would have to publish that workbook once per site. [The REST API](./03_server_management_and_restapi.md) can help automate the management of content across sites, however.
+[Projects](https://onlinehelp.tableau.com/current/server/en-us/projects.htm) (combined with Permissions) allow you to define which users inside the site can access which pieces of content. Permissions can be set at a granular level so that you can give different levels of permission to different users or groups.
 
-The alternative to managing content via sites is to use Projects and Permissions. The benefit is simpler content deployment and management. The downside is that you will have to pay extra care to ensure the Projects and Permissions are set up correctly. In addition, there are certain pages in the Tableau Server UI that allow users to see information about other users on their site. Therefore, if your users will be accessing both embedded content *and* accessing the Tableau Server UI directly, using Projects becomes less attractive.
-
-There is no best choice between sites and projects for multi-tenancy. The choice depends on the details of your deployment. However, here is some guidance:
-* If users will have access to the Tableau Server UI and it is not acceptable for different tenants to know about each other, use sites. *Note: of the [Single Sign-On options](./02_auth_and_sso.md), only trusted authentication allows you to completely prevent access to the Tableau Server UI. You would do that by not revealing the users' passwords to them, so that the embedded views are the only way they could access them.*
-* If your data environment is such that each tenant has their own database, you will be using the Document API (detailed below) to programmatically create separate dashboards for each tenant. In that case, you cannot capture the management simplification value of projects, so you should use sites.
-* If your data environment is such that tables and columns in the database determine which rows belong to which users, you will likely use User Filters for Row-level Security. In that case, you can use Projects and Permissions with the assurance that users will not see data that does not belong to them. As mentioned above, if they have access to the Tableau Server UI, they may learn about the existence of other users. 
+If you have a multi-tenant deployment of Tableau Server, you should have one site per tenant. This is the only bullet-proof method of assuring different tenants do not learn about each other or see each others' data. Projects should be used in addition to sites to give access to different groups inside of a company.
 
 ## Row-level Security
 Row-level Security is both a security and content management concern. The simplest way to make sure users only see their data is to manually build a dashboard for each of them. This is not scalable, so Tableau provides a variety of ways to build a single dashboard that is filtered to the correct data. The correct method to use depends on your data environment. Here is some guidance (details for each of the methods are below):
