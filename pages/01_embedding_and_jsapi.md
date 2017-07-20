@@ -1,17 +1,20 @@
-# Embedding Views & JavaScript API Usage
+---
+title: Embedding Views & JavaScript API Usage
+---
 
 The easiest method for embedding a Tableau view (dashboard or visualization) is with the copy-paste embed code. Navigate to a view on Tableau Server and copy the Embed Code from the Share toolbar option.
 
-![Embed Code](../img/embed_code.png)
+![Embed Code]({{ site.baseurl }}/img/embed_code.png)
 
 Once acquired, this code can be pasted into HTML.
 This method is useful for simple embedding, such as embedding into blogs or internal knowledge bases, but **only very simple embedding scenarios should use the embed code. Most deployments should instead use the JavaScript API.** It is not significantly more work to embed with the JavaScript API and doing so will gain you flexibility and power in your embedded deployment.
 
-## Embedding with the JavaScript API:
+## Embedding with the JavaScript API
 
 The basic embed code using the JavaScript looks something like:
 
 HTML:
+
 ```html
 <!-- JS file to enable the JavaScript API. You can point at the
   version on public.tableau.com, online.tableau.com, or your on-prem Server -->
@@ -20,7 +23,9 @@ HTML:
 <!-- Empty div where the viz will be placed -->
 <div id="tableauViz"></div>
 ```
+
 JavaScript:
+
 ```javascript
 function initializeViz() {
   // JS object that points at empty div in the html
@@ -35,14 +40,15 @@ function initializeViz() {
     hideToolbar: true,
   };
   viz = new tableau.Viz(placeholderDiv, url, options);
-}      
+}
 ```
 
 ## Use cases for the JavaScript API
+
 After embedding with the JavaScript API, you have unlocked its capabilities which are crucial for integrating with the front-end of your application. The possibilities with the JavaScript API are effectively infinite, but common use cases are:
 
 **Filtering and setting parameters on load** -- The options object gives you a clean interface for filtering the visualization as it loads. This is useful for loading the viz with the correct context given where the user is in your application or choices they have made.
-Note: Filtering with the JavaScript API is **not** a security mechanism. If you wish to have tamper-proof filters applied, you should use [user filters or database security](./04_multitenancy_and_rls.md).
+Note: Filtering with the JavaScript API is **not** a security mechanism. If you wish to have tamper-proof filters applied, you should use [user filters or database security]({{ site.baseurl }}/pages/04_multitenancy_and_rls).
 
 **Custom interfaces for interacting with the view** -- Dashboards often have elements for filtering, changing parameters, and switching tabs, amongst other things. When integrating with another application, you may want to match the look and feel of dashboard interfaces with the look and feel of the embedding application. For example, you can create a drop-down with HTML/CSS/JS that matches the style of your application and have that drop-down make JavaScript API calls to filter the viz or change a parameter.
 
@@ -52,7 +58,7 @@ Note: Filtering with the JavaScript API is **not** a security mechanism. If you 
 
 In the image below, an HR-focused dashboard allows the user to select employees for an audit. When the user is ready, he or she can click "Run Audit" to generate a non-Tableau audit based on the selections made inside the Tableau viz.
 
-![Embed Code](../img/run_audit.png)
+![Embed Code]({{ site.baseurl }}/img/run_audit.png)
 
 ## JavaScript API Resources
 
@@ -63,8 +69,6 @@ Link | Description
 [JavaScript API YouTube Playlist](https://www.youtube.com/watch?v=Geppur9LDnw&list=PL_qx68DwhYA8e_z9k7uoRw0zayoY35nUJ) | A series of youtube videos to get you up and running with the JavaScript API
 [JavaScript API Samples](https://github.com/tableau/js-api-samples) | Official samples, created and maintained by Tableau
 
-## 
 
-Next section: [Authentication and Single Sign-On](./02_auth_and_sso.md)
-
-Back to the [Introduction](https://github.com/tableau/embedding-playbook) or the [Table of Contents](./00_table_of_contents.md)
+<br />
+*Next section: [Authentication and Single Sign-On]({{ site.baseurl }}/pages/02_auth_and_sso)*

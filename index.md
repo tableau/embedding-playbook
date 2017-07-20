@@ -1,6 +1,9 @@
-# Tableau Embedding Playbook
+---
+title: Tableau Embedding Playbook
+---
 
 Embedding Tableau content allows you to add the power of interactive visualization to external applications. Common use cases of embedding are:
+
 * Tableau dashboards as components of line-of-business or vertical applications
 * Embedding into internal knowledge bases and CRM systems
 * Adding interactive visualizations to blog posts
@@ -11,6 +14,7 @@ The act of embedding a single dashboard or visualization into a single webpage i
 Below, you will find a summary of the key APIs and features that are used in embedded deployments. The rest of the playbook will then dive into the key embedding requirements, explain how to accomplish those requirements, and supply you with resources necessary to get up and running.
 
 ## Key features and APIs:
+
 **JavaScript API** - API for embedding and programmatically interacting with individual dashboards. Useful for customizing the user experience of interacting with a dashboard and integrating with the functionality of the embedding application.
 
 **REST API** - API for querying and managing Tableau Server or Tableau Online content and users. Useful for integrating the user management of Tableau Server with the user management of the embedding application, managing Server content and permissions based on the state of your application, querying Server metadata so the correct information is displayed to your user, and automating the management of Tableau Server amongst many other applications.
@@ -27,24 +31,6 @@ Below, you will find a summary of the key APIs and features that are used in emb
 
 **User Filtering** - Functionality for securely filtering a workbook based on the Tableau Server or Online login information. In multi-tenant scenarios, if you have a single database for multiple users or clients, you can use user filters to have the same content apply to the different clients, ensuring each user can only see the rows that he or she has access to.
 
-## Table of Contents
 
-[Introduction (this page)](https://github.com/tableau/embedding-playbook)
-
-[Embedding Views & JavaScript API Usage](pages/01_embedding_and_jsapi.md)
-
-[Authentication & Single Sign-On](pages/02_auth_and_sso.md)
-
-[User Management, Content Management & Display with the REST API](pages/03_server_management_and_restapi.md)
-
-[Multi-Tenancy & Row-Level Security](pages/04_multitenancy_and_rls.md)
-
-[Embedding in Sharepoint, Salesforce, & Mobile Apps](pages/05_embedding_in_other_apps.md)
-
-[Embedding Non-View Content](pages/06_embedding_non_view_content.md)
-
-[Development & Deployment](pages/07_development_and_deployment.md)
-
-##
-
-[Next Section: Embedding Views; JavaScript API Usage](pages/01_embedding_and_jsapi.md)
+<br />
+*Next Section: [Embedding Views & JavaScript API Usage]({{ site.baseurl }}/pages/01_embedding_and_jsapi)*
