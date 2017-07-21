@@ -13,7 +13,7 @@ If you have a workbook that is in development or test modes and needs to be prom
 
 To point the workbook to a different datasource, you can use the [Document API](https://github.com/tableau/document-api-python) to modify the connection string of the workbook. If the workbook is already on Server, you will need to:
 
-1. Use the [REST API](./03_server_management_and_restapi.md) to download the workbook
+1. Use the [REST API]({{ site.baseurl }}/pages/03_server_management_and_restapi.md) to download the workbook
 1. Use the Document API to change the connection string
 1. Republish the workbook with the REST API
 
