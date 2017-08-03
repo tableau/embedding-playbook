@@ -1,5 +1,6 @@
 ---
-title: Tableau Embedding Playbook
+title: Tableau Embedded Analytics Playbook
+layout: default
 ---
 
 Embedding Tableau content allows you to add the power of interactive visualization to external applications. Common use cases of embedding are:
