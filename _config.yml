@@ -1,0 +1,18 @@
+# Site settings
+title: Tableau Embedding Playbook
+email: mkovner@tableau.com
+description: You want to embed your Tableau content in lots of places. Start here.
+baseurl: "/embedding-playbook"
+repository: "https://github.com/tableau/embedding-playbook"
+permalinks: pretty
+defaults:
+  -
+    scope:
+      path: "" # Apply to all files
+    values:
+      layout: "default"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
