@@ -23,7 +23,7 @@ Below, you will find a summary of the key APIs and features that are used in emb
 
 **SAML, OpenID, Active Directory, Kerberos** - For environments that already use one of these systems, they can be leveraged to achieve Single Sign-On (and to leverage database security in the case of Kerberos).
 
-**Salesforce Canvas Adapter** - Application to enable Single Sign-On when embedding in Salesforce. Embedding Tableau views into Salesforce gives you the insight of Tableau dashboards where sales people are spending their time, filtered to the correct account/opportunity/etc. To enable the use of trusted authentication or SAML in Salesforce, you must set up this middle-ware adapater.
+**Salesforce Canvas Adapter** - Application to enable Single Sign-On when embedding in Salesforce. Embedding Tableau views into Salesforce gives you the insight of Tableau dashboards where sales people are spending their time, filtered to the correct account/opportunity/etc. To enable the use of trusted authentication or SAML in Salesforce, you must set up this middle-ware adapter.
 
 **Mobile App Bootstrap** - Samples/Templates for embedding in mobile apps. A great way to get up and running if you have mobile apps and want to include Tableau content or if you want a customized mobile experience for Tableau.
 
