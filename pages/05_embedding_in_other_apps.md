@@ -16,8 +16,8 @@ You can embed Tableau Online views into Sharepoint as well, but neither Active D
 
 **See also**
 
-* [Documentation for embedding in Sharepoint with Active Directory](http://onlinehelp.tableau.com/current/server/en-us/embed_ex_SP.htm)
-* [Documentation for embedding in Sharepoint with Local Authentication](http://onlinehelp.tableau.com/current/server/en-us/embed_ex_trustedauth.htm)
+* [Documentation for embedding in Sharepoint with Active Directory](https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.htm#embed_ex_SP.html)
+* [Documentation for embedding in Sharepoint with Local Authentication](https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.htm#embed_ex_trustedauth.html)
 
 ##  Embedding into Salesforce Canvas
 
