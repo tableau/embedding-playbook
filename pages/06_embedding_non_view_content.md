@@ -23,7 +23,7 @@ Additional Considerations:
 
 * You will likely want to allow your users to save their edits, but not have their personalized versions affect other users. In that case, you should turn off save permissions, but allow save-as permissions. It also makes sense to give each of the users a 'sandbox' project that only they can save to.
 * To give your user access to personalized content that they create, your application will have to be dynamic to show users all content they have access to, not just those you create. See the page on [Using the REST API to display dynamic content]({{ site.baseurl }}/pages/03_server_management_and_restapi)
-* You can embed the web authoring screen to create a workbook from scratch instead of to edit an existing one. To do that, point the iframe at `http://{TableauServer}/t/{site}/authoringNewWorkbook/{datasourceName}` .
+* You can embed the web authoring screen to create a workbook from scratch instead of to edit an existing one. To do that, point the iframe at `http://{TableauServer}/t/{site}/authoringNewWorkbook/{projectId}/{datasourceName}` .
 * If you are using trusted authentication, you can insert /trusted/{ticket} into the url as you would for a visualization
 
 ## Embedding other Tableau Server pages
