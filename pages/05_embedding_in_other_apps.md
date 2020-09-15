@@ -21,13 +21,13 @@ You can embed Tableau Online views into SharePoint as well, but neither Active D
 
 ## Embedding into Salesforce Lightning
 
-Tableau provides #a free Salesforce Lightning web component that facilitates embedding scenarios. The latest version of the Tableau Viz Lightning web component is available from the [AppExchange](https://TBD)
+Tableau provides a free Salesforce Lightning web component that facilitates embedding scenarios. The latest version of the Tableau Viz Lightning web component is available from the [AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GF1cSUAT)
 
 The Tableau Viz Lightning web component makes it easy to embed Tableau views in Salesforce Lightning pages. To install the Tableau Viz Lightning web component in your Salesforce org you just need to be a Salesforce Administrator. After it’s installed, you can just drag and drop the Tableau component on any Salesforce page and set the URL to any view on Tableau Server, Tableau Online, or Tableau Public.
 
 The Tableau Viz Lightning web component lets you quickly filter views based on the Lightning page you embed them in. You can also select filters based upon Tableau and Salesforce fields.
 
-Based on the Salesforce Lightning Web Component framework and the Tableau JavaScript API for embedding, developers can extend and customize the Tableau Viz Lightning web components Open Source project on GitHub. For more information, see [Tableau Viz Lightning Web Component](https://tableau.github.io/tableau-viz-lwc).
+Based on the Salesforce Lightning Web Component framework and the Tableau JavaScript API for embedding, developers can extend and customize the open-source Tableau Viz Lightning web component project on GitHub. For more information, see [Tableau Viz Lightning Web Component](https://tableau.github.io/tableau-viz-lwc) and the [Tableau Viz LWC Samples](https://github.com/tableau/tableau-viz-lwc-samples).
 
 The Tableau Viz Lightning web component does not support Salesforce Classic. For information about using the Salesforce Canvas adapter, see [KB Article](https://www.tableau.com/support/knowledgebase).
 
