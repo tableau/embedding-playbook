@@ -29,7 +29,7 @@ The Tableau Viz Lightning web component lets you quickly filter views based on t
 
 Based on the Salesforce Lightning Web Component framework and the Tableau JavaScript API for embedding, developers can extend and customize the open-source Tableau Viz Lightning web component project on GitHub. For more information, see [Tableau Viz Lightning Web Component](https://tableau.github.io/tableau-viz-lwc) and the [Tableau Viz LWC Samples](https://github.com/tableau/tableau-viz-lwc-samples).
 
-The Tableau Viz Lightning web component does not support Salesforce Classic. For information about using the Salesforce Canvas adapter, see the following Knowledge Base article, [Tableau Viz Lightning Web Component Does Not Work On Salesforce Classic](https://kb.tableau.com/articles/Issue/Tableau-Viz-Lightning-Web-Component-Does-Not-Work-On-Salesforce-Classic).
+The Tableau Viz Lightning web component does not support Salesforce Classic. For information about using the Salesforce Canvas adapter, see the following Knowledge Base article, [Tableau Viz Lightning Web Component Does Not Work On Salesforce Classic](https://kb.tableau.com/articles/issue/tableau-viz-lightning-web-component-does-not-work-on-salesforce-classic).
 
 For convenience, you can configure Tableau to use Single Sign-On (SSO) with Salesforce. The Tableau Viz Lightning web component only supports SAML as the SSO method. The SAML IdP used for Tableau authentication must be either the Salesforce IdP or the same IdP that is used for your Salesforce instance. Configuring Tableau Server or Tableau Online requires Tableau administrator permissions.
 
