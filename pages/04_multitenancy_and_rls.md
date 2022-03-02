@@ -8,7 +8,7 @@ Scaling an embedded analytics deployment of Tableau often means providing conten
 
 The two key tools for defining which users can see which workbooks and datasources are **Projects** and **Sites**.
 
-* [Sites](http://onlinehelp.tableau.com/current/server/en-us/sites_intro.htm) act as a logical firewall. If you create a site for each client or company that will access your Tableau content, you can be assured that users on one site will not learn about users or access content on another site.
+* [Sites](https://onlinehelp.tableau.com/current/server/en-us/sites_intro.htm) act as a logical firewall. If you create a site for each client or company that will access your Tableau content, you can be assured that users on one site will not learn about users or access content on another site.
 
 * [Projects](https://onlinehelp.tableau.com/current/server/en-us/projects.htm) (combined with Permissions) allow you to define which users inside the site can access which pieces of content. Permissions can be set at a granular level so that you can give different levels of permission to different users or groups.
 
@@ -48,7 +48,7 @@ Then, create a script that:
 
 If your tenants 'share' a database server, and there is logic in the database that determines which users can see which rows, you can build your datasources and workbooks using 'User Filters' which is a way to filter based on which user is currently logged in to Tableau Server.
 
-Essentially, when connecting to your data in Tableau Desktop you will JOIN the tables containing the data necessary for analaysis to the entitlements table so that each row has a column ([Owner] in the below example) specifying which Tableau Server user it belongs to. Then you can create a calculation `username() = [Owner]` and filter to `True`.
+Essentially, when connecting to your data in Tableau Desktop you will JOIN the tables containing the data necessary for analysis to the entitlements table so that each row has a column ([Owner] in the below example) specifying which Tableau Server user it belongs to. Then you can create a calculation `username() = [Owner]` and filter to `True`.
 
 **See also**
 
@@ -75,7 +75,7 @@ And now build your workbook normally. All sessions with the database will begin 
 
 Link | Description
 ---- | -----------
-[Setting Up Initial SQL](hhttp://onlinehelp.tableau.com/current/pro/desktop/en-us/connect_basic_initialsql.html) | Knowledge base article on using setting up and using Initial SQL
+[Setting Up Initial SQL](https://onlinehelp.tableau.com/current/pro/desktop/en-us/connect_basic_initialsql.html) | Knowledge base article on using setting up and using Initial SQL
 [Preparing your DB for Initial SQL Security](https://tableauandbehold.com/2016/03/09/using-initial-sql-for/) | Blog post to help you ensure the database is ready to use Initial SQL for row-level security
 
 

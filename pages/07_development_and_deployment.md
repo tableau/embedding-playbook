@@ -13,12 +13,12 @@ If you have a workbook that is in development or test modes and needs to be prom
 
 To point the workbook to a different datasource, you can use the [Document API](https://github.com/tableau/document-api-python) to modify the connection string of the workbook. If the workbook is already on Server, you will need to:
 
-1. Use the [REST API]({{ site.baseurl }}/pages/03_server_management_and_restapi.md) to download the workbook
+1. Use the [REST API]({{ site.baseurl }}/pages/03_server_management_and_restapi) to download the workbook
 1. Use the Document API to change the connection string
 1. Republish the workbook with the REST API
 
 The technique for promoting inside of Tableau Server depends on whether you separate your environments with projects, with sites, or with different servers.
-To promote from one project to another, simply use the [REST API Update Workbook endpoint](http://onlinehelp.tableau.com/current/api/rest_api/en-us/help.htm#REST/rest_api_ref.htm#Update_Workbook%3FTocPath%3DAPI%2520Reference%7C_____87) to change the project.
+To promote from one project to another, simply use the [REST API Update Workbook endpoint](https://onlinehelp.tableau.com/current/api/rest_api/en-us/help.htm#REST/rest_api_ref.htm#Update_Workbook%3FTocPath%3DAPI%2520Reference%7C_____87) to change the project.
 
 To promote from one site to another:
 
