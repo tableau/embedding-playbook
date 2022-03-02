@@ -64,8 +64,8 @@ In the image below, an HR-focused dashboard allows the user to select employees 
 
 Link | Description
 ---- | -----------
-[JavaScript API Documentation](http://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm#) | Official knowledge-base for the JavaScript API including an overview, tutorial, samples, explanation of key concepts, and API reference
-[JavaScript API Tutorial](http://onlinehelp.tableau.com/samples/en-us/js_api/tutorial.htm) | An interactive tutorial that will walk you through the key concepts of the JavaScript API
+[JavaScript API Documentation](https://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm#) | Official knowledge-base for the JavaScript API including an overview, tutorial, samples, explanation of key concepts, and API reference
+[JavaScript API Tutorial](https://onlinehelp.tableau.com/samples/en-us/js_api/tutorial.htm) | An interactive tutorial that will walk you through the key concepts of the JavaScript API
 [JavaScript API YouTube Playlist](https://www.youtube.com/watch?v=Geppur9LDnw&list=PL_qx68DwhYA8e_z9k7uoRw0zayoY35nUJ) | A series of youtube videos to get you up and running with the JavaScript API
 [JavaScript API Samples](https://github.com/tableau/js-api-samples) | Official samples, created and maintained by Tableau
 

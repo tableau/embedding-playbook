@@ -10,7 +10,7 @@ Embedding Tableau content allows you to add the power of interactive visualizati
 * Adding interactive visualizations to blog posts
 * Embedding into [custom mobile applications](https://github.com/tableau/embedding-playbook/blob/master/pages/05_embedding_in_other_apps.md#embedding-into-mobile-apps)
 
-The act of embedding a single dashboard or visualization into a single webpage is quite simple, but a well-engineered integration requries handling other things such as authentication, authorization, content management, and performance. Depending on your integration goals, you may require the use of a variety of features and techniques.
+The act of embedding a single dashboard or visualization into a single webpage is quite simple, but a well-engineered integration requires handling other things such as authentication, authorization, content management, and performance. Depending on your integration goals, you may require the use of a variety of features and techniques.
 
 Below, you will find a summary of the key APIs and features that are used in embedded deployments. The rest of the playbook will then dive into the key embedding requirements, explain how to accomplish those requirements, and supply you with resources necessary to get up and running.
 
