@@ -9,14 +9,14 @@ In most embedding scenarios, you will want to enable single sign-on so that the 
 The guidance for which single sign-on option to use is:
 
 * **Connected Apps and External Authorization Servers (EAS)**  This is the new and seamless way to deploy single sign-on for embedded views. Tableau connected apps and external authorization servers (EAS) provide a new set of capabilities that allow you to securely and easily authenticate users to embedded Tableau views.
-* **Trusted Authentication:** Trusted authentication was the preferred options, before the arrival of Connected apps and EAS, unless you have already deployed one of the following solutions.
+* **Trusted Authentication:** Trusted authentication was the preferred option, before the arrival of connected apps and EAS, unless you have already deployed one of the following solutions.
 * **Active Directory + Kerberos:** If all of your users are registered in your Active Directory instance and you already use Kerberos for authentication for other applications, use Active Directory + Kerberos.
 * **Active Directory + 'Enable automatic logon':** If all of your users are registered in your Active Directory instance, but you do not use Kerberos, use Active Directory with the 'Enable automatic logon' option (which uses Microsoft SSPI).
 * **SAML or OpenID:** If you have already use SAML or OpenID in your systems, configure Tableau Server to use your existing SAML or OpenID deployment.
 
 ## Connected Apps and External Authorization Servers (EAS)
 
-With Connected Apps and EAS, you can set up a direct trust relationship between Tableau and your application server. Connected apps and EAS employ an easy-to-use authentication framework and use JSON web tokens (JWT), so that users can securely access Tableau views without having to click through login screens. Connected Apps and EAS provide better security and more control over data and domain access than the Trusted Authentication method. To use these methods, you must use Tableau 2021.4 (and later) and the Embedding API v3 to embed your views.
+With connected apps and EAS, you can set up a direct trust relationship between Tableau and your application server. Connected apps and EAS employ an easy-to-use authentication framework and use JSON web tokens (JWT), so that users can securely access Tableau views without having to click through login screens. Connected apps and EAS provide better security and more control over data and domain access than the Trusted Authentication method. To use these methods, you must use Tableau 2021.4 (and later) and the Embedding API v3 to embed your views.
 
 ### Connected Apps
 
