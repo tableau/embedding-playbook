@@ -11,7 +11,9 @@ This method is useful for simple embedding, such as embedding into blogs or inte
 
 ## Embedding with the Embedding API v3
 
-The Embedding API v3 is the newest and easiest way to embed Tableau views, and provides you with options for enhancements, including improved security and integration for Connected Apps and external authorization servers (EAS). Available starting with Tableau 2021.4, you can use the Embedding API v3 to add a Tableau view as a web component in your HTML pages. Using the Tableau viz web component, you can complete your basic embed scenarios without having to write JavaScript code. The Embedding API v3 is currently available now for basic embedding. If you are looking to replace your embed code, or starting a new embedding project, you should consider using the Embedding API v3. The Embedding API v3 is under active development and in future releases will provide full parity with the JavaScript API, giving you a rich set of features that you can access in your JavaScript or TypeScript code.
+The Embedding API v3 is the newest and easiest way to embed Tableau views, and provides you with options for enhancements, including improved security and integration for Connected Apps and external authorization servers (EAS). The Embedding API v3 is the new, modern replacement for the JavaScript API v2. 
+
+Available starting with Tableau 2021.4, you can use the Embedding API v3 to add a Tableau view as a web component in your HTML pages. Using the Tableau viz web component, you can complete your basic embed scenarios without having to write JavaScript code. The Embedding API v3 is currently available now for basic embedding. If you are looking to replace your embed code, or you are starting a new embedding project, you should consider using the Embedding API v3. 
 
 The basic embed code using the Embedding API v3 and the `<tableau-viz>` web component looks something like this:
 
@@ -33,6 +35,14 @@ Here's what it looks like when you use the Embedding API v3 code to embed the vi
 <HTML>
 <script type="module" src="https://embedding.tableauusercontent.com/tableau.embedding.3.0.0.min.js"></script>
 <div id="view"><tableau-viz id='tableauViz' src='https://public.tableau.com/views/Superstore_24/Overview' height='600px' width='600px' toolbar="bottom" hide-tabs></tableau-viz></div></HTML>
+
+---
+
+### Join the Tableau Developer Program
+
+The Embedding API v3 is under active development and in future releases will provide full parity with the JavaScript API v2, giving you a rich set of features that you can access in your JavaScript or TypeScript code. To keep up to date with the coming features, join the [Tableau Developer Program](https://www.tableau.com/developer) and gain access to developer previews and demos, and your own Tableau Online Developer site.
+
+---
 
 ## Embedding with the JavaScript API
 
@@ -92,6 +102,7 @@ In the image below, an HR-focused dashboard allows the user to select employees 
 Link | Description
 ---- | -----------
 [Embedding API v3 Documentaion](https://help.tableau.com/current/api/embedding_api/en-us/index.html) | Official documentation for the Embedding API v3, including overview, key concepts, and API reference
+[Tableau Developer Program](https://www.tableau.com/developer) | Join the Tableau Developer Program and keep up to date with the latest news and previews of developer tools and APIs
 [JavaScript API v2 Documentation](http://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm#) | Official documentation for the JavaScript API including an overview, tutorial, samples, explanation of key concepts, and API reference
 [JavaScript API Tutorial](http://onlinehelp.tableau.com/samples/en-us/js_api/tutorial.htm) | An interactive tutorial that will walk you through the key concepts of the JavaScript API
 [JavaScript API YouTube Playlist](https://www.youtube.com/watch?v=Geppur9LDnw&list=PL_qx68DwhYA8e_z9k7uoRw0zayoY35nUJ) | A series of youtube videos to get you up and running with the JavaScript API

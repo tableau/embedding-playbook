@@ -37,6 +37,8 @@ For convenience, you can configure Tableau to use Single Sign-On (SSO) with Sale
 
 * For information about setting up SSO with Tableau Server, see [Configure SAML for Tableau Viz Lightning Web Component](https://help.tableau.com/current/server/en-us/saml_config_LWC.htm).
 
+* Learn more about the Tableau Viz Lightning web component by completing the [Embed Tableau Visualizations in Salesforce](https://trailhead.salesforce.com/en/content/learn/projects/embed-tableau-visualizations-in-salesforce) Trailhead project.
+
 
 ## Embedding into Mobile Apps
 
