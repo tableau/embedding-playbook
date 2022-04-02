@@ -1,22 +1,26 @@
 ---
-title: Authentication and Single Sign-On
+title: Authentication and Single Sign-On (SSO)
 ---
 
-In most embedding scenarios, you will want to enable single sign-on so that the users that are signed in to your application do not have to also sign in to Tableau Server. There are a few ways to enable single sign-on to Tableau Server.
+In most embedding scenarios, you will want to enable single sign-on so that the users that are signed in to your application do not have to also sign into Tableau Server or Tableau Online. There are various options to enable single sign-on (SSO) to Tableau.
 
-**Note**: This page discusses users logging in to Tableau Server. Related, but separate, is the issue of [user management]({{ site.baseurl }}/pages/03_server_management_and_restapi) in which you ensure all relevant users are registered with Tableau Server.
+**Note:** This page discusses users logging into Tableau Server and  Tableau Online. Related, but separate, is the issue of [user management]({{ site.baseurl }}/pages/03_server_management_and_restapi) in which you ensure all relevant users are registered and provisioned with Tableau.
 
 The guidance for which single sign-on option to use is:
 
-* **Connected Apps and External Authorization Servers (EAS)**  This is the new and seamless way to deploy single sign-on for embedded views. Tableau connected apps and external authorization servers (EAS) provide a new set of capabilities that allow you to securely and easily authenticate users to embedded Tableau views.
-* **Trusted Authentication:** Trusted authentication was the preferred option, before the arrival of connected apps and EAS, unless you have already deployed one of the following solutions.
+* **Connected Apps:** Use Connected Apps if you want to facilitate an explicit trust relationship between Tableau Online or Tableau Server and external applications where Tableau content is embedded. The trust relationship is established and verified through an authentication token in the [JSON Web Token (JWT) standard](https://datatracker.ietf.org/doc/html/rfc7519).
+
+* **External Authorization Servers (EAS):** Use EAS if you prefer to establish a trust relationship between Tableau Server and an identity provider you've already configured for Tableau Server. A standard OAuth flow is used to provide your users a single sign-on experience to Tableau content embedded in your external applications.
+
+* **Trusted Authentication:** Use Trusted Authentication if you wish to establish trust between Tableau Server and one or more web servers using an IP allowlist. Until the release of Connected Apps and EAS, Trusted Authentication was the most commonly implemented single sign-on solution. If advanced JavaScript API v2 capabilities are required, Trusted Authentication will still be the best fit.
+
 * **Active Directory + Kerberos:** If all of your users are registered in your Active Directory instance and you already use Kerberos for authentication for other applications, use Active Directory + Kerberos.
 * **Active Directory + 'Enable automatic logon':** If all of your users are registered in your Active Directory instance, but you do not use Kerberos, use Active Directory with the 'Enable automatic logon' option (which uses Microsoft SSPI).
 * **SAML or OpenID:** If you have already use SAML or OpenID in your systems, configure Tableau Server to use your existing SAML or OpenID deployment.
 
 ## Connected Apps and External Authorization Servers (EAS)
 
-With connected apps and EAS, you can set up a direct trust relationship between Tableau and your application server. Connected apps and EAS employ an easy-to-use authentication framework and use JSON web tokens (JWT), so that users can securely access Tableau views without having to click through login screens. Connected apps and EAS provide better security and more control over data and domain access than the Trusted Authentication method. To use these methods, you must use Tableau 2021.4 (and later) and the Embedding API v3 to embed your views.
+With Connected Apps (CA) and External Authorization Server (EAS), you have two modern options to implement seamless SSO authentication for embedded Tableau views. You can either setup a trust relationship between Tableau Server, or Tableau Online, and your external application (CA) using an authentication token in the JWT standard. Or you can establish a trust relationship between Tableau Server and an identity provider (EAS) to implement a standard OAuth flow. Both options provide additional security and control scopes over Trusted Authentication. To leverage either of these methods, you must use Tableau 2021.4 (or later) and the Embedding API v3 to embed your views.
 
 ### Connected Apps
 
@@ -54,7 +58,7 @@ For example, if you programmatically build the JWT for each user and assign it t
 
 ## Trusted Authentication
 
-Trusted authentication is a piece of functionality specific to Tableau Server. It allows you to trust specific machines to authenticate users on their behalf. Because the authentication happens with simple HTTP requests, it is a versatile single sign-on option and can be used to integrate with, essentially, the other authentication systems (Active Directory, Kerbos, SAML, OpenID).
+Trusted authentication is a piece of functionality specific to Tableau Server. It allows you to trust specific machines to authenticate users on their behalf. Because the authentication happens with simple HTTP requests, it is a versatile single sign-on option and can be used to integrate with, essentially, all other authentication systems or web auth flows.
 
 [The Trusted Authentication documentation](https://onlinehelp.tableau.com/current/server/en-us/trusted_auth.htm) is a good resource for getting up and running, but below is a summary of the three steps in the trusted authentication workflow:
 
@@ -65,9 +69,9 @@ Trusted authentication is a piece of functionality specific to Tableau Server. I
 Additional considerations:
 
 * A common desire is to use a single 'service' account to authenticate the users. This is not a recommended approach, because it does not allow you to apply [data security]({{ site.baseurl }}/pages/04_multitenancy_and_rls) or to track usage on a per-user basis.
-* The trusted ticket is redeemable only once and is valid for the current Tableau Server session. The session allows the user to access any of the views that the user would have if they logged onto the server. For more information, see [Trusted Authentication](https://help.tableau.com/current/server/en-us/trusted_auth.htm).
-* By default, tickets can be redeemed only for visualizations, and not for other content pages in Tableau Server. To enable the user to see those, you must configure [unrestricted tickets](https://kb.tableau.com/articles/issue/login-prompt-when-embedding-server). See also: the [embedding non-view content]({{ site.baseurl }}/pages/06_embedding_non_view_content) page in this playbook.
-* If your web application has dynamic IP addresses, such that it is not feasible to trust a specific set of static IP addresses, you should create a small 'ticket requester' application that only allows requests from your web application, requests tickets from Server, and then returns them to your web application. You can then deploy this 'ticket requester' application to a static IP address.
+* The trusted ticket is redeemable only once within three minutes of being issued and establishes a Tableau Server session for the user. The session allows the user to access any of the views that they have access to, as determined by the user and content permissions on the server. For more information, see [Trusted Authentication](https://help.tableau.com/current/server/en-us/trusted_auth.htm).
+* By default, tickets can be redeemed only for embedded visualizations, and not for other content pages in Tableau Server. To enable the user to see those, you must configure [unrestricted tickets](https://kb.tableau.com/articles/issue/login-prompt-when-embedding-server). See also: the [embedding non-view content]({{ site.baseurl }}/pages/06_embedding_non_view_content) page in this playbook.
+* If your web application has dynamic IP addresses, such that it is not feasible to trust a specific set of static IP addresses, you have a couple of options. You could create a small 'ticket requester' application that only allows requests from your web application. The 'ticket requester' requests tickets from the server, and then returns them to your web application. You can then deploy this 'ticket requester' application to a static IP address. Or you could consider leveraging one of the other authentication mechanisms listed above that do not depend on an IP allowlist.
 
 ## Kerberos, Active Directory, SAML, and OpenID
 

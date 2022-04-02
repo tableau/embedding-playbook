@@ -23,7 +23,7 @@ You can embed Tableau Online views into SharePoint as well, but neither Active D
 
 Tableau provides a free Salesforce Lightning web component that facilitates embedding scenarios. The latest version of the Tableau Viz Lightning web component is available from the [AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GF1cSUAT)
 
-The Tableau Viz Lightning web component makes it easy to embed Tableau views in Salesforce Lightning pages. To install the Tableau Viz Lightning web component in your Salesforce org you just need to be a Salesforce Administrator. After it’s installed, you can just drag and drop the Tableau component on any Salesforce page and set the URL to any view on Tableau Server, Tableau Online, or Tableau Public.
+The Tableau Viz Lightning web component makes it easy to [Embed Tableau views into Salesforce Lightning pages](https://help.tableau.com/current/pro/desktop/en-us/embed_ex_lwc.htm). To install the Tableau Viz Lightning web component in your Salesforce org you just need to be a Salesforce Administrator. After it’s installed, you can just drag and drop the Tableau component on any Salesforce page and set the URL to any view on Tableau Server, Tableau Online, or Tableau Public.
 
 The Tableau Viz Lightning web component lets you quickly filter views based on the Lightning page you embed them in. You can also select filters based upon Tableau and Salesforce fields.
 

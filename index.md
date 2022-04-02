@@ -40,7 +40,7 @@ If you are starting a new project, we recommend using Connected Apps or External
 
 **[SAML, OpenID, Active Directory, Kerberos](https://help.tableau.com/current/server/en-us/security_auth.htm)** - For environments that already use one of these systems, they can be leveraged to achieve Single Sign-On (and to leverage database security in the case of Kerberos).
 
-**Tableau Viz Lightning web component** - An easy and flexible way to quickly bring Tableau visualizations into Salesforce. Drag and drop the Tableau Viz Lightning web component in any Salesforce page, and paste the embedded URL of any Tableau view. Uses the Tableau permissions you have set up. [Embedding Tableau views into Salesforce](https://help.tableau.com/current/pro/desktop/en-us/embed_ex_lwc.htm) gives you the insight of Tableau dashboards where sales people are spending their time, filtered to the correct account/opportunity/etc.
+**[Tableau Viz Lightning web component](https://www.tableau.com/products/viz-lightning-web-component-salesforce)** - Makes it easy to [Embed Tableau views into Salesforce Lightning pages](https://help.tableau.com/current/pro/desktop/en-us/embed_ex_lwc.htm). The Tableau Viz Lightning web component is available from the Salesforce AppExchange. To embed a view, you simply drag and drop the Tableau Viz Lightning web component onto the page and then provide the URL for the Tableau view. You can embed Tableau views from Tableau Server, Tableau Online, or Tableau Public.
 
 **Mobile App Bootstrap** - Samples/Templates for embedding in mobile apps. A great way to get up and running if you have mobile apps and want to include Tableau content or if you want a customized mobile experience for Tableau.
 
@@ -50,4 +50,4 @@ If you are starting a new project, we recommend using Connected Apps or External
 
 
 <br />
-*Next Section: [Embedding Views & JavaScript API Usage]({{ site.baseurl }}/pages/01_embedding_and_jsapi)*
+*Next Section: [Embedding Tableau Views]({{ site.baseurl }}/pages/01_embedding_and_jsapi)*
