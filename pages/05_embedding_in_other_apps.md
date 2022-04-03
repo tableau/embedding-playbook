@@ -23,7 +23,7 @@ You can embed Tableau Online views into SharePoint as well, but neither Active D
 
 Tableau provides a free Salesforce Lightning web component that facilitates embedding scenarios. The latest version of the Tableau Viz Lightning web component is available from the [AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GF1cSUAT)
 
-The Tableau Viz Lightning web component makes it easy to embed Tableau views in Salesforce Lightning pages. To install the Tableau Viz Lightning web component in your Salesforce org you just need to be a Salesforce Administrator. After it’s installed, you can just drag and drop the Tableau component on any Salesforce page and set the URL to any view on Tableau Server, Tableau Online, or Tableau Public.
+The Tableau Viz Lightning web component makes it easy to [Embed Tableau views into Salesforce Lightning pages](https://help.tableau.com/current/pro/desktop/en-us/embed_ex_lwc.htm). To install the Tableau Viz Lightning web component in your Salesforce org you just need to be a Salesforce Administrator. After it’s installed, you can just drag and drop the Tableau component on any Salesforce page and set the URL to any view on Tableau Server, Tableau Online, or Tableau Public.
 
 The Tableau Viz Lightning web component lets you quickly filter views based on the Lightning page you embed them in. You can also select filters based upon Tableau and Salesforce fields.
 
@@ -36,6 +36,8 @@ For convenience, you can configure Tableau to use Single Sign-On (SSO) with Sale
 * For information about setting up SSO with Tableau Online, see [Configure SAML with Salesforce](https://help.tableau.com/current/online/en-us/saml_config_salesforce.htm) and [Configure SAML for Tableau Viz Lightning Web Component](https://help.tableau.com/current/online/en-us/saml_config_TOL_LWC.htm).
 
 * For information about setting up SSO with Tableau Server, see [Configure SAML for Tableau Viz Lightning Web Component](https://help.tableau.com/current/server/en-us/saml_config_LWC.htm).
+
+* Learn more about the Tableau Viz Lightning web component by completing the [Embed Tableau Visualizations in Salesforce](https://trailhead.salesforce.com/en/content/learn/projects/embed-tableau-visualizations-in-salesforce) Trailhead project.
 
 
 ## Embedding into Mobile Apps
