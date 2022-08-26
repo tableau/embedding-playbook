@@ -2,22 +2,64 @@
 title: Embedding Non-View Content
 ---
 
-Almost all embedded deployments of Tableau embed pre-built dashboards. But many embed other components of Tableau Server such as:
+Almost all embedded deployments of Tableau embed pre-built dashboards. But some embed other components of Tableau such as:
 
-* Web Authoring screens
+* web authoring views
 * The Tableau Server UI (embedded for integration and single sign-on reasons)
 
-There are no APIs to achieve this type of embedding, but you can use iframes and any of the [single sign-on capabilities]({{ site.baseurl }}/pages/02_auth_and_sso) to achieve this.
+The easiest and best way to include web authoring in your embedding scenario is to use the [Tableau Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html). The Tableau Embedding API v3 provides a web component, `<tableau-viz-authoring>`, which in just a few lines of HTML code, allows users to author the view in your web application. You can also use the Embedding API v3 to call JavaScript methods that let you dynamically configure and switch between the authoring or viewing experience.
 
 ## Embedding Web Authoring
 
-Web Authoring is the Tableau Desktop-like functionality in the browser. The fact that Web Authoring exists allows you to pass on the self-service capabilities of Tableau to your end users. You may have pre-built dashboards for them to use, but they may have minor customization request or may want to build visualizations and dashboards from scratch.
+Web authoring allows someone to edit a visualization just as they would in Tableau Desktop.
+Embedding a view with web authoring gives your users the ability to modify and update a view, all while staying in their workflow. Embedded web authoring means that you can create comprehensive embedded applications for your customers that now include options for self-servicing.
 
-For many situations, it is acceptable to simply allow the default behavior of allowing the user to click 'Edit' on the toolbar of an embedded dashboard. The result will be a new browser tab opened to the web authoring screen for that workbook. However, if you want to keep the user inside your application, you may prefer to embed the web authoring capabilities. To do that:
+When it comes to editing a visualization, it is often acceptable to simply use the default settings and allow the user to click **Edit** on the toolbar of an embedded dashboard. The result will be a new browser tab opened to the web authoring screen for that workbook. However, if you want to keep the user inside your application, you might prefer to embed the web authoring capabilities. To do that:
 
-1. Each workbook has a unique url to access the web authoring screen: http://{TableauServer}/t/{site}/authoring/{wbname}/{dashboard/sheetname} Create a webpage that contains an iframe that points at the web authoring url for the workbook. You will likely make this a dynamic webpage so you do not have to hard-code this webpage for each workbook.
-1. On the webpage where the embedding dashboard lives, create a link to the page that embeds the web authoring screen.
-1. Make sure to hide the toolbar of the dashboard so that the user cannot click 'Edit' on the toolbar. If you need to show the toolbar, you have to get a bit tricky: Turn off editing permissions for the workbook, so that option does not appear for the user. Create a clone of the workbook that *can* be edited. The link from step 2 links to this cloned, editable workbook.
+* Add a `<tableau-authoring-viz>` element to your HTML code or use the Embedding API v3 JavaScript methods to create a `TableauAuthoringViz` object. Set the `src` attribute or property to the URL of the viz. Then link to, or import, the Embedding API v3 library. 
+
+   ```html
+   <tableau-authoring-viz id="AuthoringViz"       
+     src='https://my-server/authoring/my-workbook/my-view'>
+    </tableau-authoring-viz>
+
+   ```
+
+### Create a custom editing workflow
+
+To create your own editing workflows, you can hide the default **Edit**, **Close**, and **Edit in Desktop** buttons on the toolbar, by setting attributes on the `<tableau-authoring-viz>` and `<tableau-viz>` web components, or by setting those properties on the JavaScript objects. And then create your own custom buttons in your application and switch between authoring and viewing.
+
+You could also change a setting to suppress the default actions that occur when the **Close**, **Edit**, or **Edit in Desktop** buttons in the toolbar are clicked. You can then setup event listeners (for example, `EditButtonClick`, or `PublishedAs`) to handle the button clicks and customize the authoring and publishing flow to suit the needs of your users. For example, you might follow this scenario to switch between viewing and web authoring modes.
+
+1. Create a `<tableau-viz>` component (or `TableauViz` object), set the `suppress-default-edit-behavior` attribute to turn off the default actions that occur when the user clicks the **Edit** button, or closes, or publishes the view.
+
+1. In the `<tableau-viz>` component, set the `src` URL and then add the `onEditButtonClicked` event listener to call your custom handler (`handleEditButtonClicked()`) when the user wants to switch to edit mode.
+
+   ```html
+
+    <tableau-viz
+     id="viewingViz"
+     src="https://myserver/t/site/workbook/sheet"
+     width="800" height="600"
+     suppress-default-edit-behavior
+     onEditButtonClicked="handleEditButtonClicked">
+    </tableau-viz>
+
+   ```
+
+1. Create a `<tableau-authoring-viz>` component or `TableauAuthoringViz` object, but don't specify the `src` URL to the view, so that the view doesn't appear until after the **Edit** button is clicked. You can also set the HTML style properties to hide the component or `<div>` that will contain the authoring view.
+
+1. In your custom `handleEditButtonClicked()` method, you should assign the `src` URL to the `TableauAuthoringViz` object so that when it is rendered it shows the view. You should also set the style properties to show the authoring component and to hide the `TableauViz` object.
+
+1. In the `<tableau-authoring-viz>` component, add the `onWorkbookPublishedAs` event attribute or property to be able to get the new URL for the saved workbook. In your custom handler for the published-as event, assign the new URL to the `TableauViz` object. 
+
+1. In the `<tableau-authoring-viz>` component, add the `onWorkbookReadyToClose` event attribute to know when to switch back to view mode. In your custom event handler for the close event, hide the authoring component from view and show the viewing component.
+
+For an overview of the embedded web authoring feature, see [How to Enable Self-Service Analytics in Your Application with Embedded Web Authoring](https://www.tableau.com/about/blog/2022/8/how-enable-self-service-analytics-your-application-embedded-web-authoring). For a hands-on tutorial, see [Embedded API - Web Authoring Tutorial](https://www.tableau.com/developer/learning/embedding-api-web-authoring-tutorial). And for more information, see [Embedded Web Authoring](https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_web_authoring.html) in the Embedding API v3 Help documentation.
+
+
+<!-- Not sure if we need to keep any of the following. Does it still apply? -->
+// TO DO: Does the following still apply? 
 
 Additional Considerations:
 
