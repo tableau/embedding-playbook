@@ -4,17 +4,17 @@ title: Embedding Non-View Content
 
 Almost all embedded deployments of Tableau embed pre-built dashboards. But some embed other components of Tableau such as:
 
-* web authoring views
-* The Tableau Server UI (embedded for integration and single sign-on reasons)
+* web authoring experience
+* The Tableau Server UI (embedded for integration and single sign-on reasons). (Note that Tableau does not offer support for this deployment).
 
-The easiest and best way to include web authoring in your embedding scenario is to use the [Tableau Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html). The Tableau Embedding API v3 provides a web component, `<tableau-viz-authoring>`, which in just a few lines of HTML code, allows users to author the view in your web application. You can also use the Embedding API v3 to call JavaScript methods that let you dynamically configure and switch between the authoring or viewing experience.
+The easiest and best way to include web authoring in your embedding scenario is to use the [Tableau Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html). The Tableau Embedding API v3 provides a web component, `<tableau-viz-authoring>`, which in just a few lines of HTML code, allows users to author the view in your web application (if permissions allow). You can also use the Embedding API v3 to call JavaScript methods that let you to customize the authoring lifecycle. For example, you can dynamically configure and switch between the authoring or viewing experience.
 
 ## Embedding Web Authoring
 
 Web authoring allows someone to edit a visualization just as they would in Tableau Desktop.
-Embedding a view with web authoring gives your users the ability to modify and update a view, all while staying in their workflow. Embedded web authoring means that you can create comprehensive embedded applications for your customers that now include options for self-servicing.
+Embedding a view with web authoring gives your users the ability to modify and update a view, all while staying in their workflow. Embedded web authoring means that you can create comprehensive embedded applications for your customers that include options for self-servicing.
 
-When it comes to editing a visualization, it is often acceptable to simply use the default settings and allow the user to click **Edit** on the toolbar of an embedded dashboard. The result will be a new browser tab opened to the web authoring screen for that workbook. However, if you want to keep the user inside your application, you might prefer to embed the web authoring capabilities. To do that:
+When it comes to editing a visualization, it is often acceptable to simply use the default settings and allow the user to click **Edit** on the toolbar of an embedded dashboard. The result will be a new browser tab opened to the web authoring screen for that workbook. However, now you can embed the Tableau authoring experience directly in the application. There's no need to have users jump to another window or tab. You can use the **Edit** button in the toolbar, or create your own edit button that matches the look and feel of your application. To do that:
 
 * Add a `<tableau-authoring-viz>` element to your HTML code or use the Embedding API v3 JavaScript methods to create a `TableauAuthoringViz` object. Set the `src` attribute or property to the URL of the viz. Then link to, or import, the Embedding API v3 library. 
 
@@ -57,16 +57,13 @@ You could also change a setting to suppress the default actions that occur when 
 
 For an overview of the embedded web authoring feature, see [How to Enable Self-Service Analytics in Your Application with Embedded Web Authoring](https://www.tableau.com/about/blog/2022/8/how-enable-self-service-analytics-your-application-embedded-web-authoring). For a hands-on tutorial, see [Embedded API - Web Authoring Tutorial](https://www.tableau.com/developer/learning/embedding-api-web-authoring-tutorial). And for more information, see [Embedded Web Authoring](https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_web_authoring.html) in the Embedding API v3 Help documentation.
 
-
-<!-- Not sure if we need to keep any of the following. Does it still apply? -->
-// TO DO: Does the following still apply? 
-
 Additional Considerations:
 
 * You will likely want to allow your users to save their edits, but not have their personalized versions affect other users. In that case, you should turn off save permissions, but allow save-as permissions. It also makes sense to give each of the users a 'sandbox' project that only they can save to.
-* To give your user access to personalized content that they create, your application will have to be dynamic to show users all content they have access to, not just those you create. See the page on [Using the REST API to display dynamic content]({{ site.baseurl }}/pages/03_server_management_and_restapi)
-* You can embed the web authoring screen to create a workbook from scratch instead of to edit an existing one. To do that, point the iframe at `http://{TableauServer}/t/{site}/authoringNewWorkbook/{datasourceName}` .
-* If you are using trusted authentication, you can insert /trusted/{ticket} into the url as you would for a visualization
+
+* To give your user access to personalized content that they create, your application will have to be dynamic to show users all content they have access to, not just those you create. See the page on [Using the REST API to display dynamic content]({{ site.baseurl }}/pages/03_server_management_and_restapi).
+
+* If you are using Connected Apps for embedding views, be sure to set the scope (`scp`) claim in the Jason Web Token (JWT) to include web authoring (`tableau:views:embed_authoring`). For information about Connected Apps, see [Authentication and Single Sign-On (SSO)]({{site.baseurl}}/pages/02_auth_and_sso) and [Configure Tableau Connected Apps to Enable SSO for Embedded Content](https://help.tableau.com/current/online/en-us/connected_apps.htm).
 
 ## Embedding other Tableau Server pages
 
