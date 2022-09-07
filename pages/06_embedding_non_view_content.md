@@ -1,5 +1,5 @@
 ---
-title: Embedding Non-View Content
+title: Embedding Analytics Experiences
 ---
 
 Almost all embedded deployments of Tableau embed pre-built dashboards. But some embed other components of Tableau such as:
