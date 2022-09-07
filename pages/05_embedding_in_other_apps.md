@@ -53,4 +53,4 @@ The Mobile App Bootstrap comes in two flavors:
 In addition, Tableau has released the [Mobile Connected Client Plugin](https://github.com/tableau/mobile-connected-client) which can accompany the Mobile App Bootstrap, or any app that embeds Tableau content, to handle authentication so that your users do not have to continually sign in to Tableau Server.
 
 <br />
-*Next section: [Embedding Non-View Content]({{ site.baseurl }}/pages/06_embedding_non_view_content)*
+*Next section: [Embedding Analytics Experiences]({{ site.baseurl }}/pages/06_embedding_non_view_content)*
