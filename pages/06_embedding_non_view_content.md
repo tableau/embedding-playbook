@@ -63,7 +63,7 @@ Additional Considerations:
 
 * To give your user access to personalized content that they create, your application will have to be dynamic to show users all content they have access to, not just those you create. See the page on [Using the REST API to display dynamic content]({{ site.baseurl }}/pages/03_server_management_and_restapi).
 
-* If you are using Connected Apps for embedding views, be sure to set the scope (`scp`) claim in the Jason Web Token (JWT) to include web authoring (`tableau:views:embed_authoring`). For information about Connected Apps, see [Authentication and Single Sign-On (SSO)]({{site.baseurl}}/pages/02_auth_and_sso) and [Configure Tableau Connected Apps to Enable SSO for Embedded Content](https://help.tableau.com/current/online/en-us/connected_apps.htm).
+* If you are using Connected Apps for embedding views, be sure to set the scope (`scp`) claim in the JSON Web Token (JWT) to include web authoring (`tableau:views:embed_authoring`). For information about Connected Apps, see [Authentication and Single Sign-On (SSO)]({{site.baseurl}}/pages/02_auth_and_sso) and [Configure Tableau Connected Apps to Enable SSO for Embedded Content](https://help.tableau.com/current/online/en-us/connected_apps.htm).
 
 ## Embedding other Tableau Server pages
 
