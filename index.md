@@ -16,11 +16,7 @@ The following list provides a summary of the key APIs and features that are used
 
 ## Key features and APIs
 
-**[Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html)** - The Embedding API v3 provides an updated developer experience and enhancements over the JavaScript API v2. The Embedding API v3 provides [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) for embedding Tableau visualizations and is available starting with Tableau version 2021.4. When fully implemented later this year, the Embedding API v3 will support all the functionality of the JavaScript API v2, while providing future enhancements for embedding scenarios.
-
-**[JavaScript API v2](https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm)** - an API used on the front-end of the embedding application that initializes Tableau visualizations in JavaScript and provides a wealth of classes and methods driving interactivity between Tableau and your app.
-
-If you are starting a new project, we recommend using the Embedding API v3 as it will receive feature enhancements moving forward.
+**[Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html)** - The Embedding API v3 provides an updated developer experience and enhancements over the JavaScript API v2. The Embedding API v3 provides [web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) for embedding Tableau visualizations and is available starting with Tableau version 2021.4. 
 
 **[REST API](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api.htm)** - Allows for integration between an embedding application and Tableau Server or Tableau Online by way of RESTful endpoints that manage users, content, and permissions amongst many other capabilities provided by the Tableau platform. Common use-cases include integrating user management in Tableau with user management in the embedding application, managing content and permissions according to the state of the embedding application, querying Tableau metadata so the correct information is displayed to end-users, and automating the management of Tableau Server.
 
@@ -31,12 +27,6 @@ If you are starting a new project, we recommend using the Embedding API v3 as it
 **[External Authorization Servers (EAS)](https://help.tableau.com/current/server/en-us/connected_apps_eas.htm)** - Establishes a trust relationship between Tableau Server and the EAS. By establishing a trust relationship, you’re able to provide your users a single sign-on (SSO) experience to Tableau content embedded in your external applications through the identity provider (IdP) you’ve already configured for Tableau Server. When embedded Tableau content is loaded in your custom application, a standard OAuth flow is used. After users successfully sign in to the IdP, they are then automatically signed in to Tableau Server. To register an EAS with Tableau Server, you must have an EAS already configured. In addition, the EAS must send a valid [JSON web token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519).
 
 ***NOTE:** EAS is only available for Tableau Server and the [Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html).*
-
-**[Trusted Authentication](https://help.tableau.com/current/server/en-us/trusted_auth.htm)** - Establishes a trusted relationship between Tableau Server and an external application to provide a secure and seamless authentication experience. Unlike Connected Apps or External Authorization Server, Trusted Authentication does not follow the [JWT standard](https://datatracker.ietf.org/doc/html/rfc7519).
-
-If you are starting a new project, we recommend using Connected Apps or External Authorization Server.
-
-***NOTE:** Trusted Authentication is only available for Tableau Server and the [JavaScript API v2](https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm).*
 
 **[SAML, OpenID, Active Directory, Kerberos](https://help.tableau.com/current/server/en-us/security_auth.htm)** - For environments that already use one of these systems, they can be leveraged to achieve Single Sign-On (and to leverage database security in the case of Kerberos).
 
