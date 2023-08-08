@@ -1,23 +1,8 @@
 ---
-title: Embedding in SharePoint, Salesforce, and Mobile Apps
+title: Embedding in Salesforce, SharePoint, and Mobile Apps
 ---
 
-Much of this playbook focuses on embedding Tableau content in custom-developed web applications, but there are three common embedding scenarios that have specific requirements: SharePoint, Salesforce, and Mobile Apps.
-
-## Embedding in SharePoint
-
-Tableau provides a SharePoint Web Part to facilitate SharePoint embedding scenarios.
-
-The Web Part, as well as the instructions for installing it are located under `C:\Program Files\Tableau\Tableau Server\<version>\extras\embedding\sharepoint` within your Tableau Server install directory.
-Using the Web Part is optional if Enable Automatic Logon option (e.g. Microsoft SSPI) is enabled for Active Directory during the Tableau Server install and configuration. In this case, simply using the built-in SharePoint Page Viewer will suffice. All you need to do is [paste the Embed Code]({{ site.baseurl }}/pages/01_embedding_and_jsapi) into the Content Editor.
-The Tableau-supplied Web Part becomes necessary when using [Trusted Ticket authentication]({{ site.baseurl }}/pages/02_auth_and_sso) to achieve Single Sign-On.
-
-You can embed Tableau Online views into SharePoint as well, but neither Active Directory nor Trusted Tickets are supported for Online.
-
-**See also**
-
-* [Documentation for embedding in SharePoint with Active Directory](https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.htm#embed_ex_SP.html)
-* [Documentation for embedding in SharePoint with Local Authentication](https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.htm#embed_ex_trustedauth.html)
+Much of this playbook focuses on embedding Tableau content in custom-developed web applications, but there are three common embedding scenarios that have specific requirements: Salesforce, SharePoint, and Mobile Apps.
 
 ## Embedding into Salesforce Lightning
 
@@ -39,6 +24,24 @@ For convenience, you can configure Tableau to use Single Sign-On (SSO) with Sale
 
 * Learn more about the Tableau Viz Lightning web component by completing the [Embed Tableau Visualizations in Salesforce](https://trailhead.salesforce.com/en/content/learn/projects/embed-tableau-visualizations-in-salesforce) Trailhead project.
 
+---
+
+## Embedding in SharePoint
+
+Tableau provides a SharePoint Web Part to facilitate SharePoint embedding scenarios.
+
+The Web Part, as well as the instructions for installing it are located under `C:\Program Files\Tableau\Tableau Server\<version>\extras\embedding\sharepoint` within your Tableau Server install directory.
+Using the Web Part is optional if Enable Automatic Logon option (e.g. Microsoft SSPI) is enabled for Active Directory during the Tableau Server install and configuration. In this case, simply using the built-in SharePoint Page Viewer will suffice. All you need to do is [paste the Embed Code]({{ site.baseurl }}/pages/01_embedding_and_jsapi) into the Content Editor.
+The Tableau-supplied Web Part becomes necessary when using [Trusted Ticket authentication]({{ site.baseurl }}/pages/02_auth_and_sso) to achieve Single Sign-On.
+
+You can embed Tableau Online views into SharePoint as well, but neither Active Directory nor Trusted Tickets are supported for Online.
+
+**See also**
+
+* [Documentation for embedding in SharePoint with Active Directory](https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.htm#embed_ex_SP.html)
+* [Documentation for embedding in SharePoint with Local Authentication](https://onlinehelp.tableau.com/current/pro/desktop/en-us/help.htm#embed_ex_trustedauth.html)
+
+---
 
 ## Embedding into Mobile Apps
 
