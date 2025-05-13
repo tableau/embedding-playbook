@@ -110,8 +110,8 @@ Link | Description
 ---- | -----------
 [Embedding API v3 Documentaion](https://help.tableau.com/current/api/embedding_api/en-us/index.html) | Official documentation for the Embedding API v3, including overview, key concepts, and API reference
 [Tableau Developer Program](https://www.tableau.com/developer) | Join the Tableau Developer Program and keep up to date with the latest news and previews of developer tools and APIs
-[JavaScript API v2 Documentation](http://onlinehelp.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm#) | Official documentation for the JavaScript API including an overview, tutorial, samples, explanation of key concepts, and API reference
-[JavaScript API Tutorial](http://onlinehelp.tableau.com/samples/en-us/js_api/tutorial.htm) | An interactive tutorial that will walk you through the key concepts of the JavaScript API
+[JavaScript API v2 Documentation](https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm) | Official documentation for the JavaScript API including an overview, tutorial, samples, explanation of key concepts, and API reference
+[JavaScript API Tutorial](https://help.tableau.com/samples/en-us/js_api/tutorial.htm) | An interactive tutorial that will walk you through the key concepts of the JavaScript API
 [JavaScript API YouTube Playlist](https://www.youtube.com/watch?v=Geppur9LDnw&list=PL_qx68DwhYA8e_z9k7uoRw0zayoY35nUJ) | A series of youtube videos to get you up and running with the JavaScript API
 [JavaScript API Samples](https://github.com/tableau/js-api-samples) | Official samples, created and maintained by Tableau
 
