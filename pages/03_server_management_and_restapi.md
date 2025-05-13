@@ -2,7 +2,7 @@
 title: User Management, Content Management, and Display with the REST API
 ---
 
-Embedding a single visualization with the [Embedding API v3 or JavaScript API v2]({{ site.baseurl }}/pages/01_embedding_and_jsapi) and enabling [single sign-on]({{ site.baseurl }}/pages/02_auth_and_sso) is a crucial first step, but is only part of the story when building scaled solutions that use Tableau content as components. You often will have to use the REST API to integrate the users and content between your system and Tableau Server.
+Embedding a single visualization with the [Embedding API v3]({{ site.baseurl }}/pages/01_embedding_and_jsapi) and enabling [single sign-on]({{ site.baseurl }}/pages/02_auth_and_sso) is a crucial first step, but is only part of the story when building scaled solutions that use Tableau content as components. You often will have to use the REST API to integrate the users and content between your system and Tableau Server.
 
 The REST API allows you to query and manage sites, users, groups, workbooks, data sources, projects, and subscriptions/schedules. The automation and integration use cases are effectively infinite, but the most common workflows it is used for in embedded analytics are:
 
@@ -38,7 +38,7 @@ And if *different* users have access to *different* sets of content, it will not
 1. [Query workbooks for user](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_workbooks_and_views.htm#query_workbooks_for_user) passing in the username of the user currently logged in to your application
 1. For each workbook returned: [Grab the Preview Image](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref.htm#query_view_with_preview)
 1. Populate the Table of Contents with links to pages that embed the workbooks, using the preview images.
-1. When the user clicks one of the links, they are brought to a page in your application that embeds the chosen dashboard. To avoid having to hard-code these embedding pages, you will likely create a dynamic web page that can be passed the workbook name and view name so that you can construct the url for the JavaScript API v2 or the Embedding API v3 to use. The details of engineering that dynamic webpage depend on your web application and front-end framework.
+1. When the user clicks one of the links, they are brought to a page in your application that embeds the chosen dashboard. To avoid having to hard-code these embedding pages, you will likely create a dynamic web page that can be passed the workbook name and view name so that you can construct the url for the Embedding API v3 to use. The details of engineering that dynamic webpage depend on your web application and front-end framework.
 
 ## Publishing Workbooks
 

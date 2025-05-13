@@ -2,17 +2,17 @@
 title: Authentication and Single Sign-On (SSO)
 ---
 
-In most embedding scenarios, you will want to enable single sign-on so that the users that are signed in to your application do not have to also sign into Tableau Server or Tableau Online. There are various options to enable single sign-on (SSO) to Tableau.
+In most embedding scenarios, you will want to enable single sign-on so that the users that are signed in to your application do not have to also sign into Tableau Server or Tableau Cloud. There are various options to enable single sign-on (SSO) to Tableau.
 
-**Note:** This page discusses users logging into Tableau Server and  Tableau Online. Related, but separate, is the issue of [user management]({{ site.baseurl }}/pages/03_server_management_and_restapi) in which you ensure all relevant users are registered and provisioned with Tableau.
+**Note:** This page discusses users logging into Tableau Server and  Tableau Cloud. Related, but separate, is the issue of [user management]({{ site.baseurl }}/pages/03_server_management_and_restapi) in which you ensure all relevant users are registered and provisioned with Tableau.
 
 The guidance for which single sign-on option to use is:
 
-* **Connected Apps:** Use Connected Apps if you want to facilitate an explicit trust relationship between Tableau Online or Tableau Server and external applications where Tableau content is embedded. The trust relationship is established and verified through an authentication token in the [JSON Web Token (JWT) standard](https://datatracker.ietf.org/doc/html/rfc7519).
+* **Connected Apps:** Use Connected Apps if you want to facilitate an explicit trust relationship between Tableau Cloud or Tableau Server and external applications where Tableau content is embedded. The trust relationship is established and verified through an authentication token in the [JSON Web Token (JWT) standard](https://datatracker.ietf.org/doc/html/rfc7519).
 
 * **External Authorization Servers (EAS):** Use EAS if you prefer to establish a trust relationship between Tableau Server and an identity provider you've already configured for Tableau Server. A standard OAuth flow is used to provide your users a single sign-on experience to Tableau content embedded in your external applications.
 
-* **Trusted Authentication:** Use Trusted Authentication if you wish to establish trust between Tableau Server and one or more web servers using an IP allowlist. Until the release of Connected Apps and EAS, Trusted Authentication was the most commonly implemented single sign-on solution. If advanced JavaScript API v2 capabilities are required, Trusted Authentication will still be the best fit.
+* **Trusted Authentication:** Use Trusted Authentication if you wish to establish trust between Tableau Server and one or more web servers using an IP allowlist. Until the release of Connected Apps and EAS, Trusted Authentication was the most commonly implemented single sign-on solution. If advanced capabilities are required, Trusted Authentication will still be the best fit.
 
 * **Active Directory + Kerberos:** If all of your users are registered in your Active Directory instance and you already use Kerberos for authentication for other applications, use Active Directory + Kerberos.
 * **Active Directory + 'Enable automatic logon':** If all of your users are registered in your Active Directory instance, but you do not use Kerberos, use Active Directory with the 'Enable automatic logon' option (which uses Microsoft SSPI).
@@ -20,15 +20,15 @@ The guidance for which single sign-on option to use is:
 
 ## Connected Apps and External Authorization Servers (EAS)
 
-With Connected Apps (CA) and External Authorization Server (EAS), you have two modern options to implement seamless SSO authentication for embedded Tableau views. You can either setup a trust relationship between Tableau Server, or Tableau Online, and your external application (CA) using an authentication token in the JWT standard. Or you can establish a trust relationship between Tableau Server and an identity provider (EAS) to implement a standard OAuth flow. Both options provide additional security and control scopes over Trusted Authentication. To leverage either of these methods, you must use Tableau 2021.4 (or later) and the Embedding API v3 to embed your views.
+With Connected Apps (CA) and External Authorization Server (EAS), you have two modern options to implement seamless SSO authentication for embedded Tableau views. You can either setup a trust relationship between Tableau Server, or Tableau Cloud, and your external application (CA) using an authentication token in the JWT standard. Or you can establish a trust relationship between Tableau Server and an identity provider (EAS) to implement a standard OAuth flow. Both options provide additional security and control scopes over Trusted Authentication. To leverage either of these methods, you must use Tableau 2021.4 (or later) and the Embedding API v3 to embed your views.
 
 ### Connected Apps
 
-For information about using connected apps for embedding views from Tableau Online, see [Configure Tableau Connected Apps to Enable SSO for Embedded Content](https://help.tableau.com/current/online/en-us/connected_apps.htm). For information about setting up a connected app on Tableau Server or Tableau Online using the Tableau REST API, see the [Connected App Methods](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_connected_app.htm).
+For information about using connected apps for embedding views from Tableau Cloud, see [Configure Tableau Connected Apps to Enable SSO for Embedded Content](https://help.tableau.com/current/online/en-us/connected_apps.htm). For information about setting up a connected app on Tableau Server or Tableau Cloud using the Tableau REST API, see the [Connected App Methods](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api_ref_connected_app.htm).
 
 Here is a short summary of the steps you need to take. There are four parts to enabling your embedded view as a connected app.
 
-1. As a Tableau site administrator, login in to Tableau Online and create a new connected app. Or for Tableau Server or Tableau Online, use the REST API connected apps methods to create a new connected app). Make note of the client ID, as you will need this to create the JWT.
+1. As a Tableau site administrator, login in to Tableau Cloud and create a new connected app. Or for Tableau Server or Tableau Cloud, use the REST API connected apps methods to create a new connected app). Make note of the client ID, as you will need this to create the JWT.
 
 1. Generate the secret(s) for the connected app. Make note of this secret ID and secret value as you will need these when you create the JWT.
 
@@ -42,7 +42,7 @@ If you are using an IdP on Tableau Server to authenticate users, you can use an 
 
 ### Add the JWT to the Tableau viz component
 
-Whether you are configuring your embedded web application to use EAS for Tableau Server, or as a connected app on Tableau Online or Tableau Server, you need to explicitly pass the JWT that is generated by the EAS or by your web server to the `<tableauViz>` web component.  You do this using the `token` attribute.
+Whether you are configuring your embedded web application to use EAS for Tableau Server, or as a connected app on Tableau Cloud or Tableau Server, you need to explicitly pass the JWT that is generated by the EAS or by your web server to the `<tableauViz>` web component.  You do this using the `token` attribute.
 
 For example, if you programmatically build the JWT for each user and assign it to a variable `JWT`, you might use a template literal to reference the JWT on your HTML page.
 
