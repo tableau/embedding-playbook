@@ -54,7 +54,7 @@ Essentially, when connecting to your data in Tableau Desktop you will JOIN the t
 
 Link | Description
 ---- | -----------
-[Setting Up User Filters](https://help.tableau.com/current/pro/desktop/en-us/publish_userfilters_create.htm) | Knowledge base article on setting up user filters using the username() method
+[Setting Up User Filters](https://help.tableau.com/current/pro/desktop/en-us/publish_userfilters_create.htm) | Base help article on setting up user filters using the username() method
 [Customize and Control Data Access Using User Attributes](https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_user_attributes.html) | Control and customize the user experience based on users’ contexts
 
 ### In-database Security and Initial SQL
@@ -73,7 +73,7 @@ And now build your workbook normally. All sessions with the database will begin 
 
 Link | Description
 ---- | -----------
-[Setting Up Initial SQL](https://help.tableau.com/current/pro/desktop/en-us/connect_basic_initialsql.htm) | Knowledge base article on using setting up and using Initial SQL
+[Setting Up Initial SQL](https://help.tableau.com/current/pro/desktop/en-us/connect_basic_initialsql.htm) | Base help article on using setting up and using Initial SQL
 
 
 <br />
