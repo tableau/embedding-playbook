@@ -55,6 +55,7 @@ Essentially, when connecting to your data in Tableau Desktop you will JOIN the t
 Link | Description
 ---- | -----------
 [Setting Up User Filters](https://help.tableau.com/current/pro/desktop/en-us/publish_userfilters_create.htm) | Knowledge base article on setting up user filters using the username() method
+[Customize and Control Data Access Using User Attributes](https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_user_attributes.html) | Control and customize the user experience based on users’ contexts
 
 ### In-database Security and Initial SQL
 
