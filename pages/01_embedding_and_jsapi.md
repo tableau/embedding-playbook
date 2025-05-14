@@ -58,9 +58,9 @@ The Embedding API v3 provide access to a large set of capabilities that allow fo
 **Filtering and setting parameters on load** -- The options object gives you a clean interface for filtering the visualization as it loads. This is useful for loading the viz with the correct context given where the user is in your application or choices they have made.
 Note: Filtering with the Embedding API v3 is **not** a security mechanism. If you wish to have tamper-proof filters applied, you should use [user filters or database security]({{ site.baseurl }}/pages/04_multitenancy_and_rls).
 
-**Custom interfaces for interacting with the view** -- Dashboards often have elements for filtering, changing parameters, and switching tabs, amongst other things. When integrating with another application, you may want to match the look and feel of dashboard interfaces with the look and feel of the embedding application. For example, you can create a drop-down with HTML/CSS/JS that matches the style of your application and have that drop-down make JavaScript API calls to filter the viz or change a parameter.
+**Custom interfaces for interacting with the view** -- Dashboards often have elements for filtering, changing parameters, and switching tabs, amongst other things. When integrating with another application, you may want to match the look and feel of dashboard interfaces with the look and feel of the embedding application. For example, you can create a drop-down with HTML/CSS/JS that matches the style of your application and have that drop-down make JavaScript calls to filter the viz or change a parameter.
 
-**Custom interactions** -- Because the JavaScript API gives you programmatic control over interaction, you can combine calls to create interactions that would not be possible otherwise. For example, you could create a button that switches to a specific visualization, changes a parameter, and then selects a set of marks all with a single click by the user. Or, when a user clicks a mark on a viz, you could have that drive a parameter change on another sheet. The combination of API calls is limited only by your imagination.
+**Custom interactions** -- Because the Embedding API gives you programmatic control over interaction, you can combine calls to create interactions that would not be possible otherwise. For example, you could create a button that switches to a specific visualization, changes a parameter, and then selects a set of marks all with a single click by the user. Or, when a user clicks a mark on a viz, you could have that drive a parameter change on another sheet. The combination of API calls is limited only by your imagination.
 
 **Integration with other systems** -- If a user finds an insight from a visualization, it is likely the user will want to take action on that insight elsewhere in the embedding application. With the Embedding API v3, you can query data from the visualization, listen to user events, and execute code to perform an appropriate action. This allows Tableau visual analytics to integrate within your application's workflows.
 
@@ -68,12 +68,15 @@ In the image below, an HR-focused dashboard allows the user to select employees 
 
 ![Embed Code]({{ site.baseurl }}/img/run_audit.png)
 
-## Embedding API and JavaScript API Resources
+## Embedding API Resources
 
 Link | Description
 ---- | -----------
-[Embedding API v3 Documentaion](https://help.tableau.com/current/api/embedding_api/en-us/index.html) | Official documentation for the Embedding API v3, including overview, key concepts, and API reference
+[Embedding API v3 Documentation](https://help.tableau.com/current/api/embedding_api/en-us/index.html) | Official documentation for the Embedding API v3, including overview, key concepts, and API reference
 [Tableau Developer Program](https://www.tableau.com/developer) | Join the Tableau Developer Program and keep up to date with the latest news and previews of developer tools and APIs
+[Embedding API Tutorial](https://help.tableau.com/current/api/embedding_api/en-us/tutorial/tutorial.htm) | An interactive tutorial that will walk you through the key concepts of the Embedding API
+[Embedding API Samples](https://github.com/tableau/embedding-api-v3-samples#embedding-api-v3-samples) | Official samples, created and maintained by Tableau
+[Embedding Playground](https://developer.salesforce.com/tableau/embedding-playground/overview) | Provides developers an interactive learning environment for rapidly developing embedded analytics solutions
 
 
 <br />

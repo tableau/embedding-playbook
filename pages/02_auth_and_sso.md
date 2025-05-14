@@ -15,7 +15,9 @@ The guidance for which single sign-on option to use is:
 * **Trusted Authentication:** Use Trusted Authentication if you wish to establish trust between Tableau Server and one or more web servers using an IP allowlist. Until the release of Connected Apps and EAS, Trusted Authentication was the most commonly implemented single sign-on solution. If advanced capabilities are required, Trusted Authentication will still be the best fit.
 
 * **Active Directory + Kerberos:** If all of your users are registered in your Active Directory instance and you already use Kerberos for authentication for other applications, use Active Directory + Kerberos.
+
 * **Active Directory + 'Enable automatic logon':** If all of your users are registered in your Active Directory instance, but you do not use Kerberos, use Active Directory with the 'Enable automatic logon' option (which uses Microsoft SSPI).
+
 * **SAML or OpenID:** If you have already use SAML or OpenID in your systems, configure Tableau Server to use your existing SAML or OpenID deployment.
 
 ## Connected Apps and External Authorization Servers (EAS)

@@ -8,7 +8,7 @@ Embedding Tableau content allows you to add the power of interactive visualizati
 * Tableau dashboards as components of line-of-business or vertical applications
 * Embedding into internal knowledge bases and CRM systems
 * Adding interactive visualizations to blog posts
-* Embedding into [Salesforce](https://github.com/tableau/embedding-playbook/blob/master/pages/05_embedding_in_other_apps.md)
+* Embedding into [Salesforce]({{ site.baseurl }}/pages/05_embedding_in_other_apps)
 
 The act of embedding a single dashboard or visualization into a single webpage is quite simple, but a well-engineered integration requires handling other things such as authentication, authorization, content management, and performance. Depending on your integration goals, you may require the use of a variety of features and techniques.
 
@@ -16,7 +16,7 @@ The following list provides a summary of the key APIs and features that are used
 
 ## Key features and APIs
 
-**[Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html)** - The Embedding API v3 provides an updated developer experience and enhancements over the JavaScript API v2. The Embedding API v3 provides [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for embedding Tableau visualizations and is available starting with Tableau version 2021.4. 
+**[Embedding API v3](https://help.tableau.com/current/api/embedding_api/en-us/index.html)** - The Embedding API v3 provides an updated developer experience and enhancements over the JavaScript API v2. The Embedding API v3 provides [web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for embedding Tableau visualizations and has been available starting with Tableau version 2021.4.
 
 **[REST API](https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api.htm)** - Allows for integration between an embedding application and Tableau Server or Tableau Cloud by way of RESTful endpoints that manage users, content, and permissions amongst many other capabilities provided by the Tableau platform. Common use-cases include integrating user management in Tableau with user management in the embedding application, managing content and permissions according to the state of the embedding application, querying Tableau metadata so the correct information is displayed to end-users, and automating the management of Tableau Server.
 
