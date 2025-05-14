@@ -53,7 +53,7 @@ To keep up to date with future releases, join the [Tableau Developer Program](ht
 
 ## Use cases for the Embedding API v3
 
-Rhe Embedding API v3 provide access to a large set of capabilities that allow for granular control of interactivity with embedded views, as well as the customization needed to create a seamless analytics experience within custom apps. Common use cases include:
+The Embedding API v3 provide access to a large set of capabilities that allow for granular control of interactivity with embedded views, as well as the customization needed to create a seamless analytics experience within custom apps. Common use cases include:
 
 **Filtering and setting parameters on load** -- The options object gives you a clean interface for filtering the visualization as it loads. This is useful for loading the viz with the correct context given where the user is in your application or choices they have made.
 Note: Filtering with the Embedding API v3 is **not** a security mechanism. If you wish to have tamper-proof filters applied, you should use [user filters or database security]({{ site.baseurl }}/pages/04_multitenancy_and_rls).
