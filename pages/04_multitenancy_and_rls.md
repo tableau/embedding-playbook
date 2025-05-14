@@ -8,9 +8,9 @@ Scaling an embedded analytics deployment of Tableau often means providing conten
 
 The two key tools for defining which users can see which workbooks and datasources are **Projects** and **Sites**.
 
-* [Sites](https://onlinehelp.tableau.com/current/server/en-us/sites_intro.htm) act as a logical firewall. If you create a site for each client or company that will access your Tableau content, you can be assured that users on one site will not learn about users or access content on another site.
+* [Sites](https://help.tableau.com/current/server/en-us/sites_intro.htm) act as a logical firewall. If you create a site for each client or company that will access your Tableau content, you can be assured that users on one site will not learn about users or access content on another site.
 
-* [Projects](https://onlinehelp.tableau.com/current/server/en-us/projects.htm) (combined with Permissions) allow you to define which users inside the site can access which pieces of content. Permissions can be set at a granular level so that you can give different levels of permission to different users or groups.
+* [Projects](https://help.tableau.com/current/server/en-us/projects.htm) (combined with Permissions) allow you to define which users inside the site can access which pieces of content. Permissions can be set at a granular level so that you can give different levels of permission to different users or groups.
 
 If you have a multi-tenant deployment of Tableau Server, you should have one site per tenant. This is the only bullet-proof method of assuring different tenants do not learn about each other or see each others' data. Projects should be used in addition to sites to give access to different groups inside of a company.
 
@@ -34,7 +34,7 @@ Then, create a script that:
 1. For each tenant, uses the Document API to change the database connection information, and save a copy. [Sample Script](https://github.com/tableau/document-api-python/blob/master/samples/replicate-workbook/replicate_workbook.py)
 1. Uses the [REST API (or Server Client Library)]({{ site.baseurl }}/pages/03_server_management_and_restapi)  to publish each tenant's workbook to Server.
 
-The above is all that is necessary if your workbooks have 'embedded datasources' (the datasources haven't been published separately). If you do choose to [publish the datasources to take advantage of Tableau Server's Data Server](https://onlinehelp.tableau.com/current/pro/desktop/en-us/publish_datasources.html), the Document API will still work. You will just have to apply the above workflow first to the datasource(s) and then to the workbooks:
+The above is all that is necessary if your workbooks have 'embedded datasources' (the datasources haven't been published separately). If you do choose to [publish the datasources to take advantage of Tableau Server's Data Server](https://help.tableau.com/current/pro/desktop/en-us/publish_datasources.htm), the Document API will still work. You will just have to apply the above workflow first to the datasource(s) and then to the workbooks:
 
 First, build a 'template' datasource, publish it, and build a 'template' workbook that points at the published datasource.
 Then, create a script that:
@@ -54,10 +54,8 @@ Essentially, when connecting to your data in Tableau Desktop you will JOIN the t
 
 Link | Description
 ---- | -----------
-[Setting Up User Filters](https://onlinehelp.tableau.com/current/pro/desktop/en-us/publish_userfilters_create.html#dynamic) | Knowledge base article on setting up user filters using the username() method
-[Securing User Filters](https://onlinehelp.tableau.com/current/pro/desktop/en-us/publish_userfilters_create.html#publish-user-filters) | Knowledge base article on creating your user filters at the data source level so that they are tamper-proof
-[Database Entitlements Strategy](https://tableauandbehold.com/2016/03/07/how-to-set-up-your-database-for-row-level-security-in-tableau/) | Blog post on database structure for row-level security
-[Extract-size strategies for RLS](https://tableauandbehold.com/2016/08/08/defusing-row-level-security-in-tableau-data-extracts-before-they-blow-up-part-1/) | Blog post detailing strategies for managing size of Extracts if your entitlements logic requires many one-to-many JOINs
+[Setting Up User Filters](https://help.tableau.com/current/pro/desktop/en-us/publish_userfilters_create.htm) | Base help article on setting up user filters using the username() method
+[Customize and Control Data Access Using User Attributes](https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_user_attributes.html) | Control and customize the user experience based on users’ contexts
 
 ### In-database Security and Initial SQL
 
@@ -75,9 +73,8 @@ And now build your workbook normally. All sessions with the database will begin 
 
 Link | Description
 ---- | -----------
-[Setting Up Initial SQL](https://onlinehelp.tableau.com/current/pro/desktop/en-us/connect_basic_initialsql.html) | Knowledge base article on using setting up and using Initial SQL
-[Preparing your DB for Initial SQL Security](https://tableauandbehold.com/2016/03/09/using-initial-sql-for/) | Blog post to help you ensure the database is ready to use Initial SQL for row-level security
+[Setting Up Initial SQL](https://help.tableau.com/current/pro/desktop/en-us/connect_basic_initialsql.htm) | Base help article on using setting up and using Initial SQL
 
 
 <br />
-*Next section: [Embedding in Sharepoint, Salesforce, and Mobile Apps]({{ site.baseurl }}/pages/05_embedding_in_other_apps)*
+*Next section: [Embedding in Salesforce]({{ site.baseurl }}/pages/05_embedding_in_other_apps)*

@@ -55,7 +55,7 @@ You could also change a setting to suppress the default actions that occur when 
 
 1. In the `<tableau-authoring-viz>` component, add the `onWorkbookReadyToClose` event attribute to know when to switch back to view mode. In your custom event handler for the close event, hide the authoring component from view and show the viewing component.
 
-For an overview of the embedded web authoring feature, see [How to Enable Self-Service Analytics in Your Application with Embedded Web Authoring](https://www.tableau.com/about/blog/2022/8/how-enable-self-service-analytics-your-application-embedded-web-authoring). For a hands-on tutorial, see [Embedded API - Web Authoring Tutorial](https://www.tableau.com/developer/learning/embedding-api-web-authoring-tutorial). And for more information, see [Embedded Web Authoring](https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_web_authoring.html) in the Embedding API v3 Help documentation.
+For an overview of the embedded web authoring feature, see [How to Enable Self-Service Analytics in Your Application with Embedded Web Authoring](https://www.tableau.com/blog/how-enable-self-service-analytics-your-application-embedded-web-authoring). For a hands-on tutorial, see [Embedded API - Web Authoring Tutorial](https://www.tableau.com/developer/learning/embedding-api-web-authoring-tutorial). And for more information, see [Embedded Web Authoring](https://help.tableau.com/current/api/embedding_api/en-us/docs/embedding_api_web_authoring.html) in the Embedding API v3 Help documentation.
 
 Additional Considerations:
 
@@ -69,7 +69,7 @@ Additional Considerations:
 
 You can also use the iframe approach to embed the Tableau Server UI. This is a rarer technique, but is useful if you want to use the out-of-the-box UI, but want to achieve single sign-on from your application.
 
-To do so, simply embed http://{server}/trusted/{ticket}/t/{site}/ into an iframe. Be sure to enable [unrestricted tickets](http://kb.tableau.com/articles/issue/login-prompt-when-embedding-server).
+To do so, simply embed http://{server}/trusted/{ticket}/t/{site}/ into an iframe. Be sure to enable [unrestricted tickets](https://kb.tableau.com/articles/issue/login-prompt-when-embedding-server).
 
 <br />
 *Next section: [Development and Deployment]({{ site.baseurl }}/pages/07_development_and_deployment)*
